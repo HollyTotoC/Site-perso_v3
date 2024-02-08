@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // title: ['Titan One', "sans-serif"],
+        title: ['Rammetto One', "sans-serif"],
+        body: ['Karla', "sans-serif"]
+      },
+    },
   },
   plugins: [],
 }

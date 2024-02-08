@@ -17,7 +17,7 @@ const Landing = () => {
         <div className="h-[100dvh] p-4">
             <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl">
                 <div className="flex items-center justify-between">
-                    <h1 className="text-xl text-black font-bold uppercase">
+                    <h1 className="text-xl text-black font-bold uppercase font-title">
                         Toto Certa.
                     </h1>
                     <div className="flex justify-center items-center gap-6">
@@ -32,7 +32,7 @@ const Landing = () => {
                 </div>
                 <div className="flex flex-col items-start ">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-3 mb-14">
-                        <div className="flex flex-col w-full">
+                        <div className="flex flex-col w-full font-title">
                             <h2 className="text-4xl md:text-6xl text-black uppercase font-bold ">
                                 Developpeur Front.
                             </h2>
