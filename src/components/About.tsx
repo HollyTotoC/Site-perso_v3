@@ -31,7 +31,7 @@ const About = () => {
     };
 
     return (
-        <div className="p-4 min-h-[100dvh] flex flex-col justify-end">
+        <div className="p-4 min-h-[100dvh] flex flex-col justify-end sticky top-0">
             <div className="h-full grid grid-cols-4 auto-rows-fr gap-4 rounded-xl">
                 {/* box1 */}
                 <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-500 rounded-xl p-5">

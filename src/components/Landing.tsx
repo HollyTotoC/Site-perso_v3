@@ -4,7 +4,7 @@ import { TbFileCv } from "react-icons/tb";
 const Landing = () => {
     const available = () => {
         return (
-            <div className="flex justify-center items-center text-black bg-white rounded-full px-4 py-1">
+            <div className="flex justify-center items-center text-black bg-white rounded-full px-4 py-1 sticky top-0">
                 <span>
                     Disponible pour <span className="font-bold">Fev 2024</span>
                 </span>
@@ -14,7 +14,7 @@ const Landing = () => {
     };
 
     return (
-        <div className="h-[100dvh] p-4">
+        <div className="h-[100dvh] p-4 sticky top-0">
             <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl">
                 <div className="flex items-center justify-between">
                     <h1 className="text-xl text-black font-bold uppercase font-title">

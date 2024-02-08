@@ -19,7 +19,7 @@ function App() {
                             Backend
                         </li>
                     </ul>
-                    <p className="font-semibold">
+                    <p className="font-semibold pr-20">
                         Labore incididunt labore sit culpa cillum magna qui. Ea
                         pariatur consectetur incididunt consectetur deserunt
                         culpa Lorem deserunt enim pariatur irure cupidatat.
@@ -50,7 +50,7 @@ function App() {
                             User Experience
                         </li>
                     </ul>
-                    <p className="font-semibold">
+                    <p className="font-semibold  pr-20">
                         Labore incididunt labore sit culpa cillum magna qui. Ea
                         pariatur consectetur incididunt consectetur deserunt
                         culpa Lorem deserunt enim pariatur irure cupidatat.
@@ -70,7 +70,11 @@ function App() {
             {/* Project 3 */}
             <Card url="https://jeandeportal.fr">
                 <div className="flex flex-col justify-end gap-6">
-                    <h2 className="font-title text-6xl">Editions<br />Jean de Portal</h2>
+                    <h2 className="font-title text-6xl">
+                        Editions
+                        <br />
+                        Jean de Portal
+                    </h2>
                     <ul className="flex items-center justify-start text-md font-semibold gap-3">
                         <li className="py-2 px-4 border-2 border-black rounded-full uppercase">
                             Frontend
@@ -82,7 +86,7 @@ function App() {
                             User Experience
                         </li>
                     </ul>
-                    <p className="font-semibold">
+                    <p className="font-semibold pr-20">
                         Labore incididunt labore sit culpa cillum magna qui. Ea
                         pariatur consectetur incididunt consectetur deserunt
                         culpa Lorem deserunt enim pariatur irure cupidatat.
