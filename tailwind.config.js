@@ -15,7 +15,24 @@ export default {
         'jdp-accent': '#cc0000',
         'bioseine-accent': '#ff885b',
         'quelor-accent': '#e1b668',
+        'select-accent': '#d3c9fe',
+        'hifumi-accent': '#f9a8d4',
+        'meteo-accent': '#ffef5f',
+        'kasa-accent': '#ff615f',
+        'piiquante-accent': '#8cff5f',
+        'kanap-accent': '#3397dc',
+        'omf-accent': '#ae5fda',
+        'panthere-accent': '#000000',
+      },
+      boxShadow: {
+        'white': '0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06)',
+        'white-xl': '0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05)'
       }
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ['responsive', 'hover', 'focus'],
     },
   },
   plugins: [],

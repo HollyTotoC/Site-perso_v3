@@ -15,7 +15,7 @@ const Landing = () => {
 
     return (
         <div className="h-[100dvh] p-4">
-            <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl">
+            <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl shadow-white-xl">
                 <div className="flex items-center justify-between">
                     <h1 className="text-xl text-black font-bold uppercase font-title">
                         Toto Certa.

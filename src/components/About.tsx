@@ -34,7 +34,7 @@ const About = () => {
         <div className="p-4 min-h-[100dvh] flex flex-col justify-end">
             <div className="h-full grid grid-cols-4 auto-rows-fr gap-4 rounded-xl">
                 {/* box1 */}
-                <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-500 rounded-xl p-5">
+                <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-500 rounded-xl p-5  shadow-white-xl">
                     <h2 className="font-title uppercase text-xl mt-32 mb-3 w-8/12">
                         Je suis Théo-toto Certa, un développeur front-end basé
                         en France.
@@ -52,7 +52,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className="row-span-1 col-span-1  rounded-xl overflow-hidden">
+                <div className="row-span-1 col-span-1  rounded-xl overflow-hidden  shadow-white-xl">
                     <img
                         className="object-cover h-full"
                         src="src/assets/images/toto.webp"
@@ -60,37 +60,37 @@ const About = () => {
                     />
                 </div>
 
-                <div className="row-span-1 col-span-1 flex flex-col bg-lime-300 rounded-xl p-5">
+                <div className="row-span-1 col-span-1 flex flex-col bg-lime-300 rounded-xl p-5  shadow-white-xl">
                     test
                 </div>
 
-                <div className="row-span-1 col-span-1 grid grid-cols-2 grid-row-2 gap-4">
+                <div className="row-span-1 col-span-1 grid grid-cols-2 grid-row-2 gap-4 ">
                     <a
                         href=""
-                        className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-violet-200"
+                        className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
                         aria-label="linkedin"
                     >
                         <FaLinkedin className="text-4xl m-auto h-full" />
                     </a>
                     <a
                         href=""
-                        className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-violet-200"
+                        className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
                         aria-label="github"
                     >
                         <FaGithub className="text-4xl m-auto h-full" />
                     </a>
                     <a
                         href=""
-                        className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-violet-200"
+                        className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent shadow-white-xl"
                         aria-label="cv"
                     >
                         <TbFileCv className="text-4xl m-auto h-full" />
                     </a>
-                    <div className="row-span-1 col-span-1 rounded-xl bg-violet-200"></div>
+                    <div className="row-span-1 col-span-1 rounded-xl bg-select-accent  shadow-white-xl"></div>
                 </div>
 
                 <div
-                    className="row-span-3 col-span-1 flex flex-col h-full justify-around bg-blue-600 text-white rounded-xl p-5"
+                    className="row-span-3 col-span-1 flex flex-col h-full justify-around bg-blue-600 text-white rounded-xl p-5  shadow-white-xl"
                     onMouseEnter={() => setSpeed(1)}
                     onMouseLeave={() => setSpeed(0.5)}
                 >
@@ -114,7 +114,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5">
+                <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5  shadow-white-xl">
                     <div>
                         <span className="text-5xl font-title">"</span>
                         <p>
@@ -137,15 +137,15 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5">
+                <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5  shadow-white-xl">
                     test
                 </div>
 
-                <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5">
+                <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5  shadow-white-xl">
                     test
                 </div>
 
-                <div className="row-span-1 col-span-2 flex flex-col bg-white rounded-xl p-5">
+                <div className="row-span-1 col-span-2 flex flex-col bg-white rounded-xl p-5  shadow-white-xl">
                     <h2 className="font-title text-lg">Mes stacks&nbsp;:</h2>
                     <ul className="flex items-center justify-around flex-wrap h-full">
                         <li>

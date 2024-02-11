@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import jdpMokeup from "./assets/images/mokeup/jdp-mokeup.png";
 import quelorMokeup from "./assets/images/mokeup/quelor-mokeup.png";
 import bioseineMokeup from "./assets/images/mokeup/bioseine-mokeup.png";
+import Portfolio from "./components/Portfolio";
 
 
 
@@ -126,6 +127,7 @@ function App() {
 
             <About />
             {/* full portfolio */}
+            <Portfolio />
             {/* contact */}
         </>
     );
