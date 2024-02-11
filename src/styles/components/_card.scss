@@ -1,0 +1,103 @@
+.bg-quelor {
+    position: relative;
+    background: black;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+        overflow: hidden;
+        background: radial-gradient(
+            ellipse at 83% 8.8%,
+            rgba(225, 182, 104, 0.402) 0%,
+            rgba(0, 0, 0, 0) 40%
+        );
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+        overflow: hidden;
+        background: radial-gradient(
+            ellipse at 17% 91.2%,
+            rgba(225, 182, 104, 0.402) 0%,
+            rgba(0, 0, 0, 0) 29%
+        );
+    }
+}
+
+.bg-bioseine {
+    position: relative;
+    background-color: #fbf7f1;
+    /* Pour le plus grand cercle en arrière-plan */
+    background-image: radial-gradient(
+            circle at 25% 30%,
+            #ff885b 0%,
+            #ff885b 16%,
+            transparent 16.1%
+        ),
+        radial-gradient(
+            circle at 60% 13%,
+            #046d82 0%,
+            #046d82 13%,
+            transparent 13.1%
+        ),
+        radial-gradient(
+            circle at 50% 60%,
+            #08b2d7 0%,
+            #08b2d7 8%,
+            transparent 8.1%
+        );
+    background-repeat: no-repeat;
+    /* Ajustez la position et la taille selon vos besoins */
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    background-position: right 0 top 0, left 0 bottom 0, center;
+}
+
+.bg-jdp {
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    // Utilisation de pseudo-éléments pour les images de fond avec rotation
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: 0;
+    }
+  
+    &::before {
+      background-image: url("../assets/images/logoJDPLivre.png");
+      transform: rotate(15deg); // Ajustez l'angle de rotation selon vos besoins
+      left: 0;
+      top: -5%;
+      height: 50%;
+      width: 50%;
+    }
+  
+    &::after {
+      background-image: url("../assets/images/logoJDPLivre.png");
+      transform: rotate(-30deg); // Ajustez l'angle de rotation selon vos besoins
+      right: -25%;
+      top: 42%;
+      height: 80%;
+      width: 80%;
+      filter: blur(10px) grayscale(30%);
+    }
+  }
+  

@@ -1,12 +1,10 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
-import { motion } from "framer-motion";
 
-
-const Landing = ({style}) => {
+const Landing = () => {
     const available = () => {
         return (
-            <div className="flex justify-center items-center text-black bg-white rounded-full px-4 py-1 sticky top-0">
+            <div className="flex justify-center items-center text-black bg-white rounded-full px-4 py-1">
                 <span>
                     Disponible pour <span className="font-bold">Fev 2024</span>
                 </span>
@@ -16,7 +14,7 @@ const Landing = ({style}) => {
     };
 
     return (
-        <motion.div className="h-[100dvh] p-4 sticky top-0" style={style}>
+        <div className="h-[100dvh] p-4">
             <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl">
                 <div className="flex items-center justify-between">
                     <h1 className="text-xl text-black font-bold uppercase font-title">
@@ -32,7 +30,7 @@ const Landing = ({style}) => {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col items-start ">
+                <div className="flex flex-col items-start relative">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-3 mb-14">
                         <div className="flex flex-col w-full font-title">
                             <h2 className="text-4xl md:text-6xl text-black uppercase font-bold ">
@@ -48,7 +46,7 @@ const Landing = ({style}) => {
                             dynamiques et efficaces.
                         </p>
                         <iframe
-                            className="absolute right-[-4rem] bottom-0 scale-50"
+                            className="absolute right-[-7rem] bottom-[-3rem] scale-50"
                             src="https://lottie.host/embed/3876b0fc-e191-4afe-b570-2c6e748cfbe6/ExPeIO6APg.json"
                         ></iframe>
                     </div>
@@ -68,7 +66,7 @@ const Landing = ({style}) => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
