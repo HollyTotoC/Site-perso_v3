@@ -1,33 +1,23 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 
 interface CardProps {
     children: React.ReactNode;
     url: string;
+    style?: React.CSSProperties;
 }
 
-const Card: React.FC<CardProps> = ({ children, url }) => {
-
-    const ref = useRef(null)
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ['start .01', 'end 2']
-    })
-
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
+const Card = React.forwardRef<HTMLDivElement, CardProps>(({ children, url, style }, ref) => {    
 
     
-
     return (
         <section 
             className="sticky top-0 pb-[100dvh]"
             ref={ref}
-            
-            
         >
                 <motion.div
                     className="h-[100vh] p-4"
-                    style={{ scale: scale }}
+                    style={style}
                 >
                     <div className="h-full flex flex-col justify-end bg-zinc-100 p-10 rounded-xl gap-6">
                         <div className="flex items-end">
@@ -45,6 +35,6 @@ const Card: React.FC<CardProps> = ({ children, url }) => {
                 </motion.div>
         </section>
     );
-};
+});
 
 export default Card;

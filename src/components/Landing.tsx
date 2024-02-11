@@ -1,7 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
+import { motion } from "framer-motion";
 
-const Landing = () => {
+
+const Landing = ({style}) => {
     const available = () => {
         return (
             <div className="flex justify-center items-center text-black bg-white rounded-full px-4 py-1 sticky top-0">
@@ -14,7 +16,7 @@ const Landing = () => {
     };
 
     return (
-        <div className="h-[100dvh] p-4 sticky top-0">
+        <motion.div className="h-[100dvh] p-4 sticky top-0" style={style}>
             <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl">
                 <div className="flex items-center justify-between">
                     <h1 className="text-xl text-black font-bold uppercase font-title">
@@ -66,7 +68,7 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
