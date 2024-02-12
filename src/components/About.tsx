@@ -15,11 +15,8 @@ import React from "react";
 //picto
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
-import {
-    IoIosArrowDropleftCircle,
-    IoIosArrowDroprightCircle,
-} from "react-icons/io";
 import useScrollScale from "../hooks/useScrollScale";
+import Testimonials from "./Testimonials";
 
 const About = () => {
     const [speed, setSpeed] = React.useState(0.5);
@@ -126,27 +123,8 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5  shadow-white-xl">
-                        <div>
-                            <span className="text-5xl font-title">"</span>
-                            <p>
-                                Adipisicing laborum nisi nulla officia mollit
-                                nulla pariatur aliqua excepteur veniam do. Lorem
-                                ullamco magna reprehenderit tempor laborum
-                                ullamco adipisicing non labore exercitation. Ad
-                                nisi reprehenderit anim nulla ea.
-                            </p>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <div className="flex items-center">
-                                <IoIosArrowDropleftCircle className="text-4xl" />
-                                <IoIosArrowDroprightCircle className="text-4xl" />
-                            </div>
-                            <div className="flex flex-col w-ful items-end justify-center">
-                                <p className="font-title">Name</p>
-                                <p>Company</p>
-                            </div>
-                        </div>
+                    <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5  shadow-white-xl overflow-hidden">
+                        <Testimonials />
                     </div>
 
                     <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5  shadow-white-xl">

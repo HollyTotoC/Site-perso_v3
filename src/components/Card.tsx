@@ -66,12 +66,14 @@ const Card: React.FC<CardProps> = ({
                     <div className="flex items-end">
                         {children}
                         <a
+                            aria-label="live preview"
                             href={url}
-                            className={`${accent} rounded-full w-full h-full max-h-28 max-w-28 flex items-center justify-center p-5 z-10 cursor-pointer`}
+                            className={`relative group w-full h-full max-h-28 max-w-28 flex items-center justify-center p-5 z-10 cursor-pointer `}
                         >
-                            <span className="font-semibold text-white text-center text-lg leading-5">
+                            <span className="font-semibold text-white text-center text-xl leading-5 z-10">
                                 Live Preview
                             </span>
+                            <div className={`absolute ${accent} w-full h-full rounded-full group-hover:scale-125 transition-all duration-500 ease-in-out shadow-sm group-hover:shadow-xl`} ></div>
                         </a>
                     </div>
                 </div>

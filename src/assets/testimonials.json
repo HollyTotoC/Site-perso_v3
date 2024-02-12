@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "testimonial": "Adipisicing laborum nisi nulla officia mollit nulla pariatur aliqua excepteur veniam do. Lorem ullamco magna reprehenderit tempor laborum ullamco adipisicing non labore exercitation. Ad nisi reprehenderit anim nulla ea.",
+      "name": "Alice Martin",
+      "company": "Innovatech"
+    },
+    {
+      "id": 2,
+      "testimonial": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "name": "Bob Smith",
+      "company": "TechSolutions"
+    },
+    {
+      "id": 3,
+      "testimonial": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.",
+      "name": "Carla Espinosa",
+      "company": "HealthCorp"
+    }
+  ]
+  
