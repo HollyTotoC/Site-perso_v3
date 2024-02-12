@@ -5,8 +5,6 @@
         "descfull": "Le projet Bioseine est un site front et back office pour laboratoire d'analyse médicale 2.0. Dans l'équipe de IMI, je suis intervenu sur la mise en page de certaines parties du site (booking et tuto) et développement de la partie prise de photo via smartphone.",
         "mainPicture": "src/assets/images/mokeup/bioseine.png",
         "pictures": [
-            "/screenshot/bioseine1.webp",
-            "/screenshot/bioseine1.webp"
         ],
         "link": "https://labo-bioseine.fr/",
         "git": "https://github.com/nicolasdelourme/bioseineFront",
@@ -21,7 +19,6 @@
             "Backend"
         ],
         "cat": "Web",
-        "scrollY": "-62%",
         "color": "bg-bioseine-accent"
     },
     {
@@ -30,8 +27,6 @@
         "descfull": "",
         "mainPicture": "src/assets/images/mokeup/quelor.png",
         "pictures": [
-            "/screenshot/bioseine1.webp",
-            "/screenshot/bioseine1.webp"
         ],
         "link": "https://labo-bioseine.fr/",
         "git": "https://github.com/nicolasdelourme/bioseineFront",
@@ -47,7 +42,6 @@
             "Backend"
         ],
         "cat": "Web",
-        "scrollY": "-62%",
         "color": "bg-quelor-accent"
     },
     {
@@ -56,9 +50,6 @@
         "descfull": "Select-informatique m'a contacté pour développer leur site vitrine afin de mettre en avant leur nouveau SIL : iLab. Avec l’assistance d'une graphiste pour la partie design, j'ai développé leur nouveau site via Wordpress avec Elementor pur leur créer un thème personnalisé leur laissant la possibilité de faire évoluer leur nouvelle vitrine.",
         "mainPicture": "src/assets/images/mokeup/select.png",
         "pictures": [
-            "/screenshot/select1.webp",
-            "/screenshot/select2.webp",
-            "/screenshot/select3.webp"
         ],
         "link": "https://select-informatique.com/",
         "git": "https://github.com/HollyTotoC",
@@ -72,7 +63,6 @@
             "Backend"
         ],
         "cat": "Web",
-        "scrollY": "-55%",
         "color": "bg-select-accent"
     },
     {
@@ -81,8 +71,6 @@
         "descfull": "Le site des éditions Jean de Portal est un projet ambitieux qui regroupe de nombreuse fonctionnalités techniques : boutique, gestion de stock, gestion d’abonnement, microservices, micro-site rattaché,...",
         "mainPicture": "src/assets/images/mokeup/jdp.png",
         "pictures": [
-            "/screenshot/jdp1.webp",
-            "/screenshot/jdp2.webp"
         ],
         "link": "https://www.jeandeportal.fr/",
         "git": "https://github.com/nicolasdelourme/jeandeportal",
@@ -97,8 +85,28 @@
             "Backend"
         ],
         "cat": "Web",
-        "scrollY": "-80%",
         "color": "bg-jdp-accent"
+    },
+    {
+        "title": "MVS France 💻📝",
+        "desc": "Proposition de redesign du site MVS France pour optimiser ses performance SEO et pour être aux normes d'accessibilité.",
+        "descfull": "",
+        "mainPicture": "src/assets/images/mokeup/mvs.png",
+        "pictures": [
+        ],
+        "link": "https://mvsfrance-demo.netlify.app/",
+        "git": "",
+        "client": "Projet personnel",
+        "tags": [
+            "Frontend",
+            "UI",
+            "React",
+            "Typescript",
+            "Tailwind",
+            "SEO"
+        ],
+        "cat": "Web",
+        "color": "bg-mvs-accent"
     },
     {
         "title": "HiFuMi 🎮📝",
@@ -106,16 +114,6 @@
         "descfull": "Entrez dans l'arène numérique du jeu intemporel Pierre, Papier, Ciseaux! Défiez vos amis en ligne ou tentez votre chance contre des joueurs au hasard. Ce site met en relation direct des joeurs via l'utilisation de socket.io. J'ai utilisé Next.js pour créer une application web réactive et performante. J'ai également utilisé TailwindCSS pour un style personnalisé et réactif, garantissant une expérience utilisateur optimale sur tous les appareils. Le back est supporté par un server Node. Ce projet est le reflet de ma passion pour le développement frontend et backend, et de mon engagement à créer des applications web performantes et esthétiquement plaisantes.",
         "mainPicture": "src/assets/images/mokeup/hifumi.png",
         "pictures": [
-            "/screenshot/hifumi1.webp",
-            "/screenshot/hifumi2.webp",
-            "/screenshot/hifumi3.webp",
-            "/screenshot/hifumi4.webp",
-            "/screenshot/hifumi5.webp",
-            "/screenshot/hifumi6.webp",
-            "/screenshot/hifumi7.webp",
-            "/screenshot/hifumi8.webp",
-            "/screenshot/hifumi9.webp",
-            "/screenshot/hifumi10.webp"
         ],
         "link": "https://www.hifumi.fr/",
         "git": "https://github.com/HollyTotoC/hiifumi",
@@ -132,7 +130,6 @@
             "Backend"
         ],
         "cat": "Web",
-        "scrollY": "-40%",
         "color": "bg-hifumi-accent"
     },
     {
@@ -141,11 +138,6 @@
         "descfull": "Ce site météo est une démonstration de mes compétences approfondies en développement web. Réalisé avec Next.js, il intègre la bibliothèque ui-neumorphism pour un design moderne et épuré. J'ai utilisé TailwindCSS pour un style personnalisé et réactif, garantissant une expérience utilisateur optimale sur tous les appareils. Côté frontend, j'ai mis en œuvre React pour créer des interfaces interactives et dynamiques. Sur le plan backend, j'ai développé des API robustes pour récupérer et traiter les données météorologiques. Ce projet est le reflet de ma passion pour le développement frontend et backend, et de mon engagement à créer des applications web performantes et esthétiquement plaisantes.",
         "mainPicture": "src/assets/images/mokeup/meteo.png",
         "pictures": [
-            "/screenshot/meteo1.webp",
-            "/screenshot/meteo2.webp",
-            "/screenshot/meteo3.webp",
-            "/screenshot/meteo4.webp",
-            "/screenshot/meteo5.webp"
         ],
         "link": "https://meteo-app-virid.vercel.app/",
         "git": "https://github.com/HollyTotoC/meteo_app",
@@ -161,7 +153,6 @@
             "Backend"
         ],
         "cat": "Web",
-        "scrollY": "-85%",
         "color": "bg-meteo-accent"
     },
     {
@@ -170,10 +161,6 @@
         "descfull": "Le projet Kasa est une application React développé dans le cadre de ma formation chez Openclassroom. Il s'agit d'une adaptation d'une maquette Figma en site web responsive. J'ai utilisé React et SCSS pour créer une application web qui fonctionne sur tous les appareils.",
         "mainPicture": "src/assets/images/mokeup/kasa.png",
         "pictures": [
-            "/screenshot/kasa1.webp",
-            "/screenshot/kasa2.webp",
-            "/screenshot/kasa3.webp",
-            "/screenshot/kasa4.webp"
         ],
         "link": "https://opcr7.netlify.app/",
         "git": "https://github.com/HollyTotoC/OCR_P7",
@@ -189,17 +176,12 @@
         "descfull": "Le projet Piiquante, réalisé dans le cadre de ma formation OpenClassroom, est une API pour un site de revue de sauces piquantes. J'ai utilisé Node.js, Express et MongoDB pour créer une API qui permet aux utilisateurs de créer, modifier et supprimer des sauces. J'ai également utilisé Mongoose pour créer un schéma de données et valider les entrées utilisateur.",
         "mainPicture": "src/assets/images/mokeup/piiquante.png",
         "pictures": [
-            "/screenshot/piiquante1.webp",
-            "/screenshot/piiquante2.webp",
-            "/screenshot/piiquante3.webp",
-            "/screenshot/piiquante4.webp"
         ],
         "link": "",
         "git": "https://github.com/HollyTotoC/OCR_P6",
         "client": "Openclassroom",
         "tags": ["Node.js", "Express", "MongoDB", "back"],
         "cat": "Web",
-        "scrollY": "0%%",
         "color": "bg-piiquante-accent"
     },
     {
@@ -208,16 +190,12 @@
         "descfull": "Le projet Kanap, réalisé dans le cadre de ma formation Openclassroom, est un site de e-commerce pour une boutique de canapés en ligne. Avec certaines spécifications de comportement pour la future API, j'ai mis en place une vitrine de produits, un panier d'achat et un formulaire de commande. J'ai utilisé JavaScript pour créer une application web qui fonctionne sur tous les appareils.",
         "mainPicture": "src/assets/images/mokeup/kanap.png",
         "pictures": [
-            "/screenshot/kanap1.webp",
-            "/screenshot/kanap2.webp",
-            "/screenshot/kanap3.webp"
         ],
         "link": "",
         "git": "https://github.com/HollyTotoC/OCR_P5",
         "client": "Openclassroom",
         "tags": ["Node", "JS", "SCSS", "Frontend", "CRUD"],
         "cat": "Web",
-        "scrollY": "-36%",
         "color": "bg-kanap-accent"
     },
     {
@@ -226,16 +204,12 @@
         "descfull": "Le projet OhMyFood, réalisé dans le cadre de ma formation Openclassroom, est une mise en place d'une maquette pour Ohmyfood, une start-up de commande de repas en ligne. J'ai utilisé HTML et SCSS pour créer une application web qui fonctionne sur tous les appareils.",
         "mainPicture": "src/assets/images/mokeup/omf.png",
         "pictures": [
-            "/screenshot/omf1.webp",
-            "/screenshot/omf2.webp",
-            "/screenshot/omf3.webp"
         ],
         "link": "https://hollytotoc.github.io/index.html",
         "git": "https://github.com/HollyTotoC/hollytotoc.github.io",
         "client": "Openclassroom",
         "tags": ["HTML", "SCSS", "front"],
         "cat": "Web",
-        "scrollY": "0%",
         "color": "bg-omf-accent"
     },
     {
@@ -244,15 +218,12 @@
         "descfull": "Le projet La Chouette Agence, réalisé dans le cadre de ma formation Openclassroom, est une optimisation d'un site web existant pour le rendre plus accessible. A partir d'un site web existant, un audit et une mise à jour du site devais être fait pour une meilleur SEO.",
         "mainPicture": "src/assets/images/mokeup/panthere.png",
         "pictures": [
-            "/screenshot/panthere1.webp",
-            "/screenshot/panthere2.webp"
         ],
         "link": "",
         "git": "https://github.com/HollyTotoC/OCR_P4",
         "client": "Openclassroom",
         "tags": ["HTML", "SCSS", "front", "SEO"],
         "cat": "Web",
-        "scrollY": "-64%",
         "color": "bg-panthere-accent"
     }
 ]

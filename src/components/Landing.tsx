@@ -70,9 +70,9 @@ const Landing = () => {
                             <a href={cv} target="#blank" aria-label="cv download link">
                                 <TbFileCv className="text-2xl" />
                             </a>
-                            <button className="rounded-full bg-black text-white text-xs font-semibold uppercase px-3 py-[3px]">
+                            <a href="#about" className="rounded-full bg-black text-white text-xs font-semibold uppercase px-3 py-[3px]">
                                 A propos
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

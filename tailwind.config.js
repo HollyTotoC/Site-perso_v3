@@ -22,6 +22,7 @@ export default {
         'piiquante-accent': '#bef264',
         'kanap-accent': '#3397dc',
         'omf-accent': '#ae5fda',
+        'mvs-accent': '#fe6d00',
         'panthere-accent': '#000000',
       },
       boxShadow: {

@@ -39,10 +39,11 @@ const About = () => {
             <motion.div
                 className="p-4 h-[100dvh] flex flex-col justify-end"
                 style={style}
+                id="about"
             >
                 <div className="h-full grid grid-cols-4 auto-rows-fr gap-4 rounded-xl">
                     {/* box1 */}
-                    <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-500 rounded-xl p-5  shadow-white-xl">
+                    <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-400 rounded-xl p-5  shadow-white-xl">
                         <h2 className="font-title uppercase text-xl mt-32 mb-3 w-8/12">
                             Je suis Théo-toto Certa, un développeur front-end
                             basé en France.
@@ -98,14 +99,15 @@ const About = () => {
                         <div className="row-span-1 col-span-1 rounded-xl bg-select-accent  shadow-white-xl"></div>
                     </div>
 
-                    <div
-                        className="row-span-3 col-span-1 flex flex-col h-full justify-around bg-blue-600 text-white rounded-xl p-5  shadow-white-xl"
+                    <a
+                        className="row-span-3 col-span-1 flex flex-col h-full justify-around bg-blue-600 text-white rounded-xl p-5 cursor-pointer shadow-white-xl"
                         onMouseEnter={() => setSpeed(1)}
                         onMouseLeave={() => setSpeed(0.5)}
+                        href="mailto:totoc.contact@gmail.com"
                     >
                         <div className="overflow-hidden h-full relative">
                             {/* <iframe className="absolute h-[120%] top-[-90px] right-[-90px] " src="https://lottie.host/embed/26b65f0b-16f1-4763-9d53-27c19ea1038a/TwoYmaLxur.json"></iframe> */}
-                            <div className="absolute top-[-140px] right-[-140px]">
+                            <div className="absolute top-[-140px] right-[-140px] cursor-none">
                                 <Lottie
                                     options={defaultOptions}
                                     isClickToPauseDisabled
@@ -121,7 +123,7 @@ const About = () => {
                             </h2>
                             <p>totoc.contact@gmail.com</p>
                         </div>
-                    </div>
+                    </a>
 
                     <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5  shadow-white-xl overflow-hidden">
                         <Testimonials />
