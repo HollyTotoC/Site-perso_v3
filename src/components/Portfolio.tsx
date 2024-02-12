@@ -4,7 +4,7 @@ import portfolio from '../assets/portfolio.json'
 
 const Portfolio = () => {
     return (
-        <div className="p-4 min-h-[100dvh] flex flex-col justify-end">
+        <div className="p-4 min-h-[100dvh] flex flex-col justify-end sticky top-0 z-10">
             <div className="h-full grid grid-cols-4 auto-rows-fr gap-4 rounded-xl">
                 <div className="row-span-1 col-span-2 flex flex-col justify-center bg-zinc-100 rounded-xl p-5  shadow-white-xl">
                     <h2 className="font-title uppercase text-3xl mt-20 mb-3 w-8/12">

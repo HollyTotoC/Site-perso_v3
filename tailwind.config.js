@@ -19,7 +19,7 @@ export default {
         'hifumi-accent': '#f9a8d4',
         'meteo-accent': '#ffef5f',
         'kasa-accent': '#ff615f',
-        'piiquante-accent': '#8cff5f',
+        'piiquante-accent': '#bef264',
         'kanap-accent': '#3397dc',
         'omf-accent': '#ae5fda',
         'panthere-accent': '#000000',

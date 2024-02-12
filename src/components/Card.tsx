@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useScroll, useTransform } from "framer-motion";
+import useScrollScale from "../hooks/useScrollScale"
 
 interface CardProps {
     children: React.ReactNode;
@@ -12,30 +12,12 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ children, url, bg, accent, mokeup }) => {
 
-    const [isAtTop, setIsAtTop] = useState(false);
-    const scrollRef = useRef(null); // Créez une ref spécifique pour useScroll
-    const { ref, inView } = useInView({
-        threshold: .99,
-    });
-
-    // Utilisez useEffect pour surveiller inView et ajuster isAtTop
-    useEffect(() => {
-        if (inView) {
-            setIsAtTop(true);
-        } else {
-            setIsAtTop(false);
-        }
-    }, [inView]);
-
-    useEffect(() => {
-        console.log(bg, isAtTop);
-    }, [bg, isAtTop]);
+    const { scrollRef, marge, style, scale } = useScrollScale({minMarge:"h-[100dvh]", maxMarge:"h-[200dvh]"})
 
     return (
-        <section className="" ref={ref}>
-            <motion.div 
-                className="h-[100vh] p-4"
-            >
+        <motion.section className="relative" ref={scrollRef}>
+
+            <motion.div className="h-[100vh] p-4" style={style}>
                 <div
                     className={`h-full flex flex-col justify-end p-10 rounded-xl gap-6 ${bg} overflow-hidden relative shadow-white-xl`}
                 >
@@ -55,7 +37,8 @@ const Card: React.FC<CardProps> = ({ children, url, bg, accent, mokeup }) => {
                     </div>
                 </div>
             </motion.div>
-        </section>
+            <div className={marge}></div>
+        </motion.section>
     );
 };
 
