@@ -38,39 +38,25 @@
     }
 }
 
-.bg-bioseine {
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .bg-bioseine {
     position: relative;
     background-color: #fbf7f1;
-    /* Pour le plus grand cercle en arrière-plan */
-    background-image: radial-gradient(
-            circle at 25% 30%,
-            #ff885b 0%,
-            #ff885b 16%,
-            transparent 16.1%
-        ),
-        radial-gradient(
-            circle at 60% 13%,
-            #046d82 0%,
-            #046d82 13%,
-            transparent 13.1%
-        ),
-        radial-gradient(
-            circle at 50% 60%,
-            #08b2d7 0%,
-            #08b2d7 8%,
-            transparent 8.1%
-        );
-    background-repeat: no-repeat;
-    /* Ajustez la position et la taille selon vos besoins */
-    background-size: 100% 100%, 100% 100%, 100% 100%;
-    background-position: right 0 top 0, left 0 bottom 0, center;
-}
-
-.bg-jdp {
+  }
+  
+  .bg-jdp {
     position: relative;
     background-color: white;
     overflow: hidden;
-    // Utilisation de pseudo-éléments pour les images de fond avec rotation
+  
     &::before,
     &::after {
       content: "";
@@ -100,4 +86,3 @@
       filter: blur(10px) grayscale(30%);
     }
   }
-  

@@ -1,12 +1,12 @@
-import { useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { MotionStyle, useScroll, useTransform } from "framer-motion";
 
-type scrollOptions = {
+type ScrollOptions = {
     minMarge: string;
     maxMarge: string;
-}
+};
 
-const useScrollScale = ({minMarge, maxMarge}: scrollOptions) => {
+const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
     const scrollRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: scrollRef,
@@ -14,52 +14,38 @@ const useScrollScale = ({minMarge, maxMarge}: scrollOptions) => {
     });
 
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    const [marge, setMarge] = useState(minMarge)
-    const [style, setStyle] = useState({
-        position: "sticky", // Valeur par défaut
+
+    const [style, setStyle] = useState<MotionStyle>({
+        position: "sticky",
         filter: "blur(0px)",
         opacity: 1,
-        zIndex: 1, // Assurez-vous que cette valeur par défaut est appropriée
+        zIndex: 1,
         transformOrigin: "center",
         transform: "scale(1)",
-        top: 0,
-        maxWidth: "1280px", 
+        top: "0",
+        maxWidth: "1280px",
     });
+    const [marge, setMarge] = useState(minMarge);
 
     useEffect(() => {
-        const unsubscribe = scale.onChange((latestScale) => {
-            console.log(latestScale);
-            if (latestScale === 1) {
-                setStyle({
-                    position: "sticky",
-                    filter: "blur(0px)",
-                    opacity: 1,
-                    zIndex: 1,
-                    transformOrigin: "center",
-                    transform: `scale(${latestScale})`,
-                    top: 0,
-                    maxWidth: "1280px",
-                });
-                setMarge(minMarge)
-            } else {
-                setStyle({
-                    position: "fixed",
-                    filter: `blur(${5 * (1 - latestScale)}px)`,
-                    opacity: latestScale,
-                    transform: `scale(${latestScale})`,
-                    zIndex: 0,
-                    transformOrigin: "center",
-                    top: 0,
-                    maxWidth: "1280px",
-                });
-                setMarge(maxMarge)
-            }
+        const unsubscribeScale = scale.onChange((latestScale) => {
+            setStyle((currentStyle) => ({
+                ...currentStyle,
+                position: latestScale === 1 ? "sticky" : "fixed",
+                filter: `blur(${30 * (1 - latestScale)}px)`,
+                opacity: latestScale,
+                zIndex: latestScale === 1 ? 1 : 0,
+                transform: `scale(${latestScale})`,
+            }));
+            setMarge(latestScale === 1 ? minMarge : maxMarge);
         });
-        
-        return () => unsubscribe();
-    }, []);
 
-    return {scrollRef, style, marge, scale}
-}
+        return () => {
+            unsubscribeScale();
+        };
+    }, [scale, minMarge, maxMarge]);
+
+    return { scrollRef, style, marge };
+};
 
 export default useScrollScale;

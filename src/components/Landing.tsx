@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
 import { motion } from "framer-motion";
 import useScrollScale from "../hooks/useScrollScale";
+import cv from "../assets/CV_Certa_Theo_Frontend_2024.pdf"
 
 const Landing = () => {
     const available = () => {
@@ -15,7 +16,7 @@ const Landing = () => {
         );
     };
 
-    const { scrollRef, marge, style, scale } = useScrollScale({
+    const { scrollRef, marge, style} = useScrollScale({
         minMarge: "h-[100dvh]",
         maxMarge: "h-[200dvh]",
     });
@@ -54,18 +55,19 @@ const Landing = () => {
                                 web dynamiques et efficaces.
                             </p>
                             <iframe
+                                aria-label="scroll arrow"
                                 className="absolute right-[-7rem] bottom-[-3rem] scale-50"
                                 src="https://lottie.host/embed/3876b0fc-e191-4afe-b570-2c6e748cfbe6/ExPeIO6APg.json"
                             ></iframe>
                         </div>
                         <div className="flex items-center gap-4">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/toto-certa/" target="#blank" aria-label="linkedin link">
                                 <FaLinkedin className="text-2xl" />
                             </a>
-                            <a href="">
+                            <a href="https://github.com/HollyTotoC"  target="#blank" aria-label="github link">
                                 <FaGithub className="text-2xl" />
                             </a>
-                            <a href="">
+                            <a href={cv} target="#blank" aria-label="cv download link">
                                 <TbFileCv className="text-2xl" />
                             </a>
                             <button className="rounded-full bg-black text-white text-xs font-semibold uppercase px-3 py-[3px]">

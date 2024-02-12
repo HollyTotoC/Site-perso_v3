@@ -20,6 +20,7 @@ function App() {
                 bg="bg-bioseine"
                 accent="bg-bioseine-accent"
                 mokeup={bioseineMokeup}
+                id="bioseine"
             >
                 <div className="flex flex-col justify-end gap-6 z-10">
                     <h2 className="font-title text-6xl">Bioseine</h2>
@@ -53,6 +54,7 @@ function App() {
                 bg="bg-quelor"
                 accent="bg-quelor-accent"
                 mokeup={quelorMokeup}
+                id="quelor"
             >
                 <div className="flex flex-col justify-end gap-6 text-white z-10">
                     <h2 className="font-title text-6xl">Quelor</h2>
@@ -90,6 +92,7 @@ function App() {
                 bg="bg-jdp"
                 accent="bg-jdp-accent"
                 mokeup={jdpMokeup}
+                id="jdp"
             >
                 <div className="flex flex-col justify-end gap-6 z-10">
                     <h2 className="font-title text-6xl">

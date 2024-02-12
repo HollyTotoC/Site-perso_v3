@@ -32,7 +32,7 @@ const About = () => {
         },
     };
 
-    const { scrollRef, marge, style, scale } = useScrollScale({
+    const { scrollRef, marge, style } = useScrollScale({
         minMarge: "h-[100dvh]",
         maxMarge: "h-[200dvh]",
     });
@@ -66,7 +66,7 @@ const About = () => {
 
                     <div className="row-span-1 col-span-1  rounded-xl overflow-hidden  shadow-white-xl">
                         <img
-                            className="object-cover h-full"
+                            className="object-cover w-full h-full"
                             src="src/assets/images/toto.webp"
                             alt=""
                         />
