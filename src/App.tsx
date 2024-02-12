@@ -7,10 +7,7 @@ import quelorMokeup from "./assets/images/mokeup/quelor-mokeup.png";
 import bioseineMokeup from "./assets/images/mokeup/bioseine-mokeup.png";
 import Portfolio from "./components/Portfolio";
 
-
-
 function App() {
-
     return (
         <>
             <Landing />
@@ -32,24 +29,13 @@ function App() {
                             Backend
                         </li>
                     </ul>
-                    <p className="font-semibold pr-20">
-                        Labore incididunt labore sit culpa cillum magna qui. Ea
-                        pariatur consectetur incididunt consectetur deserunt
-                        culpa Lorem deserunt enim pariatur irure cupidatat.
-                        Fugiat ad cillum est commodo aute do amet laborum Lorem
-                        veniam esse commodo. Anim consectetur aliqua consequat
-                        reprehenderit ullamco commodo anim excepteur ex. Eu
-                        cupidatat excepteur incididunt ut elit culpa ex ex sint
-                        reprehenderit reprehenderit incididunt. Ut elit sint
-                        sunt consequat anim commodo irure dolore nisi non amet
-                        reprehenderit tempor occaecat. Quis labore officia
-                        reprehenderit in sit incididunt adipisicing aliquip
-                        veniam.
+                    <p className="font-semibold pr-20 text-lg w-[80%]">
+                    Au sein de l'équipe IMI, j'ai contribué au projet Bioseine, un site innovant pour un laboratoire d'analyse médicale 2.0, en prenant en charge la mise en page de sections clés telles que la réservation et les tutoriels, ainsi que le développement de fonctionnalités de prise de photo via smartphone pour une expérience utilisateur enrichie et interactive.
                     </p>
                 </div>
             </Card>
             {/* Project 2 */}
-            <Card 
+            <Card
                 url="https://quelor.fr"
                 bg="bg-quelor"
                 accent="bg-quelor-accent"
@@ -59,29 +45,18 @@ function App() {
                 <div className="flex flex-col justify-end gap-6 text-white z-10">
                     <h2 className="font-title text-6xl">Quelor</h2>
                     <ul className="flex items-center justify-start text-md font-semibold gap-3">
-                        <li className="py-2 px-4 border-2 border-black rounded-full uppercase">
+                        <li className="py-2 px-4 border-2 border-white rounded-full uppercase">
                             Frontend
                         </li>
-                        <li className="py-2 px-4 border-2 border-black rounded-full uppercase">
+                        <li className="py-2 px-4 border-2 border-white rounded-full uppercase">
                             Design
                         </li>
-                        <li className="py-2 px-4 border-2 border-black rounded-full uppercase">
+                        <li className="py-2 px-4 border-2 border-white rounded-full uppercase">
                             User Experience
                         </li>
                     </ul>
-                    <p className="font-semibold  pr-20">
-                        Labore incididunt labore sit culpa cillum magna qui. Ea
-                        pariatur consectetur incididunt consectetur deserunt
-                        culpa Lorem deserunt enim pariatur irure cupidatat.
-                        Fugiat ad cillum est commodo aute do amet laborum Lorem
-                        veniam esse commodo. Anim consectetur aliqua consequat
-                        reprehenderit ullamco commodo anim excepteur ex. Eu
-                        cupidatat excepteur incididunt ut elit culpa ex ex sint
-                        reprehenderit reprehenderit incididunt. Ut elit sint
-                        sunt consequat anim commodo irure dolore nisi non amet
-                        reprehenderit tempor occaecat. Quis labore officia
-                        reprehenderit in sit incididunt adipisicing aliquip
-                        veniam.
+                    <p className="font-semibold pr-20 text-lg w-[80%]">
+                    Conception et développement Frontend d'un site web spécialisé dans l'or d'investissement, offrant divers outils intuitifs pour faciliter la compréhension des fluctuations des prix de l'or. Ce projet met en avant une interface utilisateur élégante et une expérience utilisateur optimisée, conçues pour aider les investisseurs à naviguer efficacement dans le marché de l'or, à analyser les tendances et à prendre des décisions d'investissement éclairées.
                     </p>
                 </div>
             </Card>
@@ -111,19 +86,8 @@ function App() {
                             User Experience
                         </li>
                     </ul>
-                    <p className="font-semibold pr-20">
-                        Labore incididunt labore sit culpa cillum magna qui. Ea
-                        pariatur consectetur incididunt consectetur deserunt
-                        culpa Lorem deserunt enim pariatur irure cupidatat.
-                        Fugiat ad cillum est commodo aute do amet laborum Lorem
-                        veniam esse commodo. Anim consectetur aliqua consequat
-                        reprehenderit ullamco commodo anim excepteur ex. Eu
-                        cupidatat excepteur incididunt ut elit culpa ex ex sint
-                        reprehenderit reprehenderit incididunt. Ut elit sint
-                        sunt consequat anim commodo irure dolore nisi non amet
-                        reprehenderit tempor occaecat. Quis labore officia
-                        reprehenderit in sit incididunt adipisicing aliquip
-                        veniam.
+                    <p className="font-semibold pr-20 text-lg w-[78%]">
+                    En tant que développeur Frontend, je suis actuellement en charge de la refonte du site des éditions Jean de Portal, enrichissant le site avec une interface utilisateur modernisée, une boutique en ligne, une gestion améliorée des stocks et des abonnements. Cette mise à jour comprend également l'intégration de campagnes publicitaires ciblées et de webinaires, tout en optimisant la gestion administrative grâce à un back office intuitif, pour une expérience utilisateur et gestionnaire améliorée.
                     </p>
                 </div>
             </Card>
