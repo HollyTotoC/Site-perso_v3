@@ -39,19 +39,10 @@ const About = () => {
 
     return (
         <motion.div className="relative" ref={scrollRef}>
-            {/* <motion.div
-                style={{
-                    scaleX: scale,
-                    transformOrigin: "left",
-                    background: "blue",
-                    position: "sticky",
-                    top: 0,
-                    width: "100%",
-                    height: "20px",
-                    zIndex: 100,
-                }}
-            /> */}
-            <motion.div className="p-4 min-h-[100dvh] flex flex-col justify-end" style={style}>
+            <motion.div
+                className="p-4 h-[100dvh] flex flex-col justify-end"
+                style={style}
+            >
                 <div className="h-full grid grid-cols-4 auto-rows-fr gap-4 rounded-xl">
                     {/* box1 */}
                     <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-500 rounded-xl p-5  shadow-white-xl">
