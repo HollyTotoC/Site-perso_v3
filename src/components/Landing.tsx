@@ -3,6 +3,7 @@ import { TbFileCv } from "react-icons/tb";
 import { motion } from "framer-motion";
 import useScrollScale from "../hooks/useScrollScale";
 import cv from "../assets/CV_Certa_Theo_Frontend_2024.pdf"
+import useSoundPlayer from "../hooks/usePlaySound";
 
 const Landing = () => {
     const available = () => {
@@ -21,6 +22,8 @@ const Landing = () => {
         maxMarge: "h-[200dvh]",
     });
 
+    const playSound = useSoundPlayer();
+
     return (
         <motion.div className="relative" ref={scrollRef}>
             <motion.div className="h-[100dvh] p-4" style={style}>
@@ -32,8 +35,9 @@ const Landing = () => {
                         <div className="flex justify-center items-center gap-6">
                             <div className="hidden md:block">{available()}</div>
                             <a
-                                href="#"
+                                href="mailto:totoc.contact@gmail.com"
                                 className="flex items-center bg-black text-white font-semibold leading-4 rounded-full text-center px-2 h-16 w-16"
+                                onClick={playSound}
                             >
                                 Let's talk
                             </a>
@@ -61,16 +65,16 @@ const Landing = () => {
                             ></iframe>
                         </div>
                         <div className="flex items-center gap-4">
-                            <a href="https://www.linkedin.com/in/toto-certa/" target="#blank" aria-label="linkedin link">
+                            <a href="https://www.linkedin.com/in/toto-certa/" onClick={playSound} target="#blank" aria-label="linkedin link">
                                 <FaLinkedin className="text-2xl" />
                             </a>
-                            <a href="https://github.com/HollyTotoC"  target="#blank" aria-label="github link">
+                            <a href="https://github.com/HollyTotoC" onClick={playSound}  target="#blank" aria-label="github link">
                                 <FaGithub className="text-2xl" />
                             </a>
-                            <a href={cv} target="#blank" aria-label="cv download link">
+                            <a href={cv} onClick={playSound} target="#blank" aria-label="cv download link">
                                 <TbFileCv className="text-2xl" />
                             </a>
-                            <a href="#about" className="rounded-full bg-black text-white text-xs font-semibold uppercase px-3 py-[3px]">
+                            <a href="#about" onClick={playSound} className="rounded-full bg-black text-white text-xs font-semibold uppercase px-3 py-[3px]">
                                 A propos
                             </a>
                         </div>

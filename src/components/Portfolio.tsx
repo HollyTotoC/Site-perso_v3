@@ -3,6 +3,7 @@ import PortfolioProject from "./PortfolioProject";
 import portfolio from '../assets/portfolio.json'
 import Lottie from "react-lottie";
 import animationData from "../assets/lotties/mail.json";
+import useSoundPlayer from "../hooks/usePlaySound";
 
 const Portfolio = () => {
     const [speed, setSpeed] = React.useState(0.5);
@@ -14,6 +15,8 @@ const Portfolio = () => {
             preserveAspectRatio: "xMidYMid slice",
         },
     };
+
+    const playSound = useSoundPlayer();
 
     return (
         <div className="p-4 min-h-[100dvh] flex flex-col justify-end sticky top-0 z-10">
@@ -28,7 +31,7 @@ const Portfolio = () => {
                 <div className="hidden bg-mvs-accent bg-hifumi-accent bg-meteo-accent bg bg-kasa-accent bg-piiquante-accent bg-omf-accent bg-kanap-accent bg-panthere-accent"></div>
 
                 {portfolio.map((project, index) => (
-                    <PortfolioProject key={index} project={project}></PortfolioProject>
+                    <PortfolioProject index={index} project={project}></PortfolioProject>
                 ))}
 
                 <a
@@ -36,6 +39,7 @@ const Portfolio = () => {
                         onMouseEnter={() => setSpeed(1)}
                         onMouseLeave={() => setSpeed(0.5)}
                         href="mailto:totoc.contact@gmail.com"
+                        onClick={playSound}
                     >
                         <div className="overflow-hidden h-full relative">
                             {/* <iframe className="absolute h-[120%] top-[-90px] right-[-90px] " src="https://lottie.host/embed/26b65f0b-16f1-4763-9d53-27c19ea1038a/TwoYmaLxur.json"></iframe> */}

@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
     IoIosArrowDropleftCircle,
     IoIosArrowDroprightCircle,
 } from "react-icons/io";
 import testimonialsData from "../assets/testimonials.json";
+import useSoundPlayer from "../hooks/usePlaySound";
 
 const Testimonials = () => {
     const [index, setIndex] = useState(0);
 
+    const playSound = useSoundPlayer()
     const nextTestimonial = () => {
+        playSound();
         setIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
     };
-
+    
     const prevTestimonial = () => {
+        playSound();
         setIndex(
             (prevIndex) =>
                 (prevIndex - 1 + testimonialsData.length) %

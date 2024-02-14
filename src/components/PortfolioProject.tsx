@@ -1,7 +1,8 @@
 import React from "react";
+import useSoundPlayer from "../hooks/usePlaySound";
 
 interface PortfolioProjectProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     project: {
         title: string;
         desc: string;
@@ -10,17 +11,19 @@ interface PortfolioProjectProps {
         mainPicture: string;
         link: string;
     };
-    key: number
+    index: number;
 }
 
 const PortfolioProject: React.FC<PortfolioProjectProps> = ({
     children,
     project,
-    key,
+    index,
 }) => {
     
+    const playSound = useSoundPlayer();
+
     return (
-        <div key={key} className={`group col-span-2 row-span-2 h-full ${project.color} rounded-xl overflow-hidden shadow-white-xl relative cursor-pointer text-white`}>
+        <div key={index} className={`group col-span-2 row-span-2 h-full ${project.color} rounded-xl overflow-hidden shadow-white-xl relative cursor-pointer text-white`}>
             
             <div className="flex justify-center items-center w-full h-full z-0 blur-0 group-hover:blur-md">
                 <img
@@ -30,7 +33,7 @@ const PortfolioProject: React.FC<PortfolioProjectProps> = ({
                 />
             </div>
 
-            <a href={project.link} target="_blank" className="absolute top-[-100%] group-hover:top-0 bg-zinc-900 bg-opacity-40 flex flex-col gap-3 justify-end w-full h-full p-4 transition-all duration-500 ease-in-out">
+            <a href={project.link} target="_blank" onClick={playSound} className="absolute top-[-100%] group-hover:top-0 bg-zinc-900 bg-opacity-40 flex flex-col gap-3 justify-end w-full h-full p-4 transition-all duration-500 ease-in-out">
                 <h1 className="text-xl font-title font-bold">
                     {project.title}
                 </h1>

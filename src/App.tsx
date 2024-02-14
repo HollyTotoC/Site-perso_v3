@@ -7,7 +7,11 @@ import quelorMokeup from "./assets/images/mokeup/quelor-mokeup.png";
 import bioseineMokeup from "./assets/images/mokeup/bioseine-mokeup.png";
 import Portfolio from "./components/Portfolio";
 
+import useScrollAudio from "./hooks/useScrollAudio";
+
 function App() {
+    useScrollAudio(0.6);
+
     return (
         <>
             <Landing />

@@ -17,6 +17,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
 import useScrollScale from "../hooks/useScrollScale";
 import Testimonials from "./Testimonials";
+import useSoundPlayer from "../hooks/usePlaySound";
 
 const About = () => {
     const [speed, setSpeed] = React.useState(0.5);
@@ -33,6 +34,8 @@ const About = () => {
         minMarge: "h-[100dvh]",
         maxMarge: "h-[200dvh]",
     });
+
+    const playSound = useSoundPlayer();
 
     return (
         <motion.div className="relative" ref={scrollRef}>
@@ -79,6 +82,7 @@ const About = () => {
                             href=""
                             className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
                             aria-label="linkedin"
+                            onClick={playSound}
                         >
                             <FaLinkedin className="text-4xl m-auto h-full" />
                         </a>
@@ -86,6 +90,7 @@ const About = () => {
                             href=""
                             className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
                             aria-label="github"
+                            onClick={playSound}
                         >
                             <FaGithub className="text-4xl m-auto h-full" />
                         </a>
@@ -93,6 +98,7 @@ const About = () => {
                             href=""
                             className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent shadow-white-xl"
                             aria-label="cv"
+                            onClick={playSound}
                         >
                             <TbFileCv className="text-4xl m-auto h-full" />
                         </a>
@@ -104,6 +110,7 @@ const About = () => {
                         onMouseEnter={() => setSpeed(1)}
                         onMouseLeave={() => setSpeed(0.5)}
                         href="mailto:totoc.contact@gmail.com"
+                        onClick={playSound}
                     >
                         <div className="overflow-hidden h-full relative">
                             {/* <iframe className="absolute h-[120%] top-[-90px] right-[-90px] " src="https://lottie.host/embed/26b65f0b-16f1-4763-9d53-27c19ea1038a/TwoYmaLxur.json"></iframe> */}

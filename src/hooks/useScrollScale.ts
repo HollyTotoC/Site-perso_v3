@@ -28,7 +28,7 @@ const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
     const [marge, setMarge] = useState(minMarge);
 
     useEffect(() => {
-        const unsubscribeScale = scale.onChange((latestScale) => {
+        const unsubscribeScale = scale.on("change", (latestScale) => {
             setStyle((currentStyle) => ({
                 ...currentStyle,
                 position: latestScale === 1 ? "sticky" : "fixed",
