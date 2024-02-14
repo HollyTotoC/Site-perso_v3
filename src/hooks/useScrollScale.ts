@@ -17,7 +17,7 @@ const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
 
     const [style, setStyle] = useState<MotionStyle>({
         position: "sticky",
-        filter: "blur(0px)",
+        filter: "none",
         opacity: 1,
         zIndex: 1,
         transformOrigin: "center",
@@ -29,17 +29,23 @@ const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
 
     useEffect(() => {
         const unsubscribeScale = scale.on("change", (latestScale) => {
+            // Calculer la valeur de flou et arrondir
+            const blurValue = Math.round(30 * (1 - latestScale));
+            console.log(blurValue);
+            console.log(blurValue > 0 ? `blur(${blurValue}px)` : "none",)
+    
             setStyle((currentStyle) => ({
                 ...currentStyle,
                 position: latestScale === 1 ? "sticky" : "fixed",
-                filter: `blur(${30 * (1 - latestScale)}px)`,
+                // Appliquer le flou uniquement si la valeur calculée est > 0
+                filter: blurValue > 0 ? `blur(${blurValue}px)` : "none",
                 opacity: latestScale,
                 zIndex: latestScale === 1 ? 1 : 0,
                 transform: `scale(${latestScale})`,
             }));
             setMarge(latestScale === 1 ? minMarge : maxMarge);
         });
-
+    
         return () => {
             unsubscribeScale();
         };

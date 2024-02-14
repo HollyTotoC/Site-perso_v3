@@ -10,7 +10,7 @@ import Portfolio from "./components/Portfolio";
 import useScrollAudio from "./hooks/useScrollAudio";
 
 function App() {
-    useScrollAudio(0.6);
+    useScrollAudio(.7);
 
     return (
         <>
