@@ -18,6 +18,7 @@ import { TbFileCv } from "react-icons/tb";
 import useScrollScale from "../hooks/useScrollScale";
 import Testimonials from "./Testimonials";
 import useSoundPlayer from "../hooks/usePlaySound";
+import JobBox from "./JobBox";
 
 const About = () => {
     const [speed, setSpeed] = React.useState(0.5);
@@ -73,8 +74,8 @@ const About = () => {
                         />
                     </div>
 
-                    <div className="row-span-1 col-span-1 flex flex-col bg-lime-300 rounded-xl p-5  shadow-white-xl">
-                        test
+                    <div className="row-span-1 col-span-1 rounded-xl">
+                        <JobBox />
                     </div>
 
                     <div className="row-span-1 col-span-1 grid grid-cols-2 grid-row-2 gap-4 ">
