@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import useScrollScale from "../hooks/useScrollScale";
 import cv from "../assets/CV_Certa_Theo_Frontend_2024.pdf"
 import useSoundPlayer from "../hooks/usePlaySound";
+import Sphere3D from "./Sphere";
 
 const Landing = () => {
     const available = () => {
@@ -27,9 +28,10 @@ const Landing = () => {
     return (
         <motion.div className="relative" ref={scrollRef}>
             <motion.div className="h-[100dvh] p-4" style={style}>
-                <div className="h-full flex flex-col justify-between bg-zinc-100 p-10 rounded-xl shadow-white-xl">
-                    <div className="flex items-center justify-between">
-                        <h1 className="text-xl text-black font-bold uppercase font-title">
+                <div className="h-full flex flex-col justify-between bg-zinc-100 p-5 md:p-10 overflow-hidden relative rounded-xl shadow-white-xl">
+                    <Sphere3D />
+                    <div className="flex items-center justify-between relative z-10">
+                        <h1 className="text-lg md:text-xl text-black font-bold uppercase font-title">
                             Toto Certa.
                         </h1>
                         <div className="flex justify-center items-center gap-6">
@@ -44,17 +46,17 @@ const Landing = () => {
                         </div>
                     </div>
                     <div className="flex flex-col items-start relative">
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-3 mb-14">
-                            <div className="flex flex-col w-full font-title">
-                                <h2 className="text-4xl md:text-6xl text-black uppercase font-bold ">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-3 mb-14">
+                            <div className="flex flex-col w-full font-title pointer-events-none	">
+                                <h2 className="text-3xl md:text-6xl text-black uppercase font-bold ">
                                     Developpeur Front.
                                 </h2>
-                                <h2 className="text-4xl md:text-6xl text-black uppercase font-bold ">
+                                <h2 className="text-2xl md:text-6xl text-black uppercase font-bold ">
                                     React, Next, JS.
                                 </h2>
                             </div>
                             <div className="md:hidden">{available()}</div>
-                            <p className="md:w-1/5 font-semibold">
+                            <p className="md:w-1/5 font-semibold pointer-events-none">
                                 J'aide mes clients à développer des expériences
                                 web dynamiques et efficaces.
                             </p>

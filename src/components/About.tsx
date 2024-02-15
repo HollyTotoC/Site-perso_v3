@@ -44,10 +44,10 @@ const About = () => {
                 style={style}
                 id="about"
             >
-                <div className="h-full grid grid-cols-4 auto-rows-fr gap-4 rounded-xl">
+                <div className="h-full grid grid-cols-1 md:grid-cols-4 auto-rows-auto md:auto-rows-fr gap-y-4 md:gap-4 rounded-xl">
                     {/* box1 */}
                     <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-400 rounded-xl p-5  shadow-white-xl">
-                        <h2 className="font-title uppercase text-xl mt-32 mb-3 w-8/12">
+                        <h2 className="font-title uppercase text-xl mt-32 mb-3 w-full md:w-8/12">
                             Je suis Théo-toto Certa, un développeur front-end
                             basé en France.
                         </h2>
