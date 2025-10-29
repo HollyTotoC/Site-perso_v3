@@ -8,6 +8,20 @@ type ScrollOptions = {
 
 const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
     const scrollRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Détecter si mobile
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     const { scrollYProgress } = useScroll({
         target: scrollRef,
         offset: ["center start", "end start"],
@@ -28,12 +42,27 @@ const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
     const [marge, setMarge] = useState(minMarge);
 
     useEffect(() => {
+        // Si mobile, ne pas appliquer les effets de scroll
+        if (isMobile) {
+            setStyle({
+                position: "relative",
+                filter: "none",
+                opacity: 1,
+                zIndex: 1,
+                transformOrigin: "center",
+                transform: "scale(1)",
+                top: "0",
+                maxWidth: "1280px",
+            });
+            setMarge(minMarge);
+            return;
+        }
+
+        // Si desktop, comportement normal
         const unsubscribeScale = scale.on("change", (latestScale) => {
             // Calculer la valeur de flou et arrondir
             const blurValue = Math.round(30 * (1 - latestScale));
-            console.log(blurValue);
-            console.log(blurValue > 0 ? `blur(${blurValue}px)` : "none",)
-    
+
             setStyle((currentStyle) => ({
                 ...currentStyle,
                 position: latestScale === 1 ? "sticky" : "fixed",
@@ -45,11 +74,11 @@ const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
             }));
             setMarge(latestScale === 1 ? minMarge : maxMarge);
         });
-    
+
         return () => {
             unsubscribeScale();
         };
-    }, [scale, minMarge, maxMarge]);
+    }, [scale, minMarge, maxMarge, isMobile]);
 
     return { scrollRef, style, marge };
 };

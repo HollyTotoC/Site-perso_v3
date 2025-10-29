@@ -14,7 +14,9 @@ const useScrollAudio = (volumeLevel: number) => {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
         setUserInteracted(true); // Indique qu'une interaction a eu lieu
-      }).catch((e) => console.error("Error playing audio", e));
+      }).catch(() => {
+        // Silent catch for audio autoplay restrictions
+      });
 
       // Nettoyer: supprimer les écouteurs après la première interaction
       window.removeEventListener('click', startAudioOnUserInteraction);
@@ -28,7 +30,9 @@ const useScrollAudio = (volumeLevel: number) => {
       if (userInteracted) {
         // Jouez l'audio seulement si l'utilisateur a interagi avec la page
         if (audioRef.current.paused) {
-          audioRef.current.play().catch((e) => console.error("Error playing audio", e));
+          audioRef.current.play().catch(() => {
+            // Silent catch for audio autoplay restrictions
+          });
         }
 
         clearTimeout(scrollTimeoutRef.current);
@@ -52,13 +56,17 @@ const useScrollAudio = (volumeLevel: number) => {
     audioRef.current.volume = volumeLevel;
     audioRef.current.addEventListener('ended', () => {
       audioRef.current.currentTime = 0;
-      audioRef.current.play().catch((e) => console.error("Error replaying audio", e));
+      audioRef.current.play().catch(() => {
+        // Silent catch for audio autoplay restrictions
+      });
     });
 
     return () => {
       audioRef.current.removeEventListener('ended', () => {
         audioRef.current.currentTime = 0;
-        audioRef.current.play().catch((e) => console.error("Error replaying audio", e));
+        audioRef.current.play().catch(() => {
+          // Silent catch for audio autoplay restrictions
+        });
       });
     };
   }, []);

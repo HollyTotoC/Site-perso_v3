@@ -1,12 +1,42 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
     motion,
     useMotionValue,
     useTransform,
     useMotionTemplate,
+    MotionValue,
+    PanInfo,
 } from "framer-motion";
 
-const projects = [
+// Interfaces TypeScript
+interface Project {
+    name: string;
+    description: string;
+    color: string;
+}
+
+interface DragStartState {
+    axis: "x" | "y" | null;
+    animation: { x: number; y: number };
+}
+
+interface CardStyleProps {
+    x?: MotionValue<number>;
+    y?: MotionValue<number>;
+    scale?: MotionValue<number> | number;
+    boxShadow?: MotionValue<string> | string;
+    zIndex?: number;
+}
+
+interface CardProps {
+    project: Project;
+    style: CardStyleProps;
+    onDirectionLock?: (axis: "x" | "y") => void;
+    onDragEnd?: (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => void;
+    animate?: { x: number; y: number };
+}
+
+const projects: Project[] = [
     {
         name: "Quelor",
         description: "Développement Front-End pour...",
@@ -28,7 +58,7 @@ const projects = [
 // et souhaitez simplement faire défiler ces projets de manière séquentielle.
 // const randomColor = current => { ... }
 
-const Card = ({ project, style, onDirectionLock, onDragEnd, animate }) => (
+const Card: React.FC<CardProps> = ({ project, style, onDirectionLock, onDragEnd, animate }) => (
     <motion.div
         className={`card absolute left-0 top-0 p-4 w-full h-full flex flex-col justify-between rounded-xl overflow-hidden shadow-xl shadow-white cursor-grab active:cursor-grabbing ${project.color}`}
         drag
@@ -47,14 +77,14 @@ const Card = ({ project, style, onDirectionLock, onDragEnd, animate }) => (
         transition={{ ease: [0.6, 0.05, -0.01, 0.9] }}
         whileTap={{ scale: 0.65 }}
     >
-        <h2 className="font-title">En ce moment je travail sur {project.name}</h2>
+        <h2 className="font-title">En ce moment je travaille sur {project.name}</h2>
         <p>{project.description}</p>
     </motion.div>
 );
 
 const JobBox = () => {
-    const [cards, setCards] = useState(projects);
-    const [dragStart, setDragStart] = useState({
+    const [cards, setCards] = useState<Project[]>(projects);
+    const [dragStart, setDragStart] = useState<DragStartState>({
         axis: null,
         animation: { x: 0, y: 0 },
     });
@@ -77,9 +107,9 @@ const JobBox = () => {
     );
     const boxShadow = useMotionTemplate`0 ${shadowBlur}px 25px -5px rgba(0, 0, 0, ${shadowOpacity})`;
 
-    const onDirectionLock = axis => setDragStart({ ...dragStart, axis: axis });
-    const animateCardSwipe = (animation) => {
-        setDragStart({ ...dragStart, animation });
+    const onDirectionLock = (axis: "x" | "y") => setDragStart({ ...dragStart, axis: axis });
+    const animateCardSwipe = (animation: { x?: number; y?: number }) => {
+        setDragStart({ ...dragStart, animation: { x: animation.x || 0, y: animation.y || 0 } });
         setTimeout(() => {
             setDragStart({ axis: null, animation: { x: 0, y: 0 } });
             x.set(0);
@@ -91,10 +121,10 @@ const JobBox = () => {
         }, 200);
     };
 
-    const onDragEnd = (info) => {
+    const onDragEnd = (info: PanInfo) => {
         const threshold = 100;
         const offset = dragStart.axis === "x" ? info.offset.x : info.offset.y;
-        if (Math.abs(offset) >= threshold) {
+        if (Math.abs(offset) >= threshold && dragStart.axis) {
             const direction = offset > 0 ? 175 : -175;
             animateCardSwipe({ [dragStart.axis]: direction });
         }
@@ -117,7 +147,7 @@ const JobBox = () => {
                                 : { scale: 1, boxShadow: "none" }),
                         }}
                         onDirectionLock={onDirectionLock}
-                        onDragEnd={(e, info) => onDragEnd(info)}
+                        onDragEnd={(_e, info) => onDragEnd(info)}
                         animate={dragStart.animation}
                     />
                 );

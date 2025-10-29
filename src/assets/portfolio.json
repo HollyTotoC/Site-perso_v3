@@ -1,7 +1,7 @@
 [    
     {
         "title": "Bioseine ⚕️",
-        "desc": "Développement front et back office pour un laboratoire d'analyse médicale 2.0 permettant la prise de rendez-vous en ligne, la gestions des résultats et le suivit de la patientelle jsuqu'au paiement.",
+        "desc": "Développement front et back office pour un laboratoire d'analyse médicale 2.0 permettant la prise de rendez-vous en ligne, la gestions des résultats et le suivit de la patientelle jusqu'au paiement.",
         "descfull": "Le projet Bioseine est un site front et back office pour laboratoire d'analyse médicale 2.0. Dans l'équipe de IMI, je suis intervenu sur la mise en page de certaines parties du site (booking et tuto) et développement de la partie prise de photo via smartphone.",
         "mainPicture": "src/assets/images/mokeup/bioseine.png",
         "pictures": [
@@ -23,7 +23,7 @@
     },
     {
         "title": "Quelor 🪙📈",
-        "desc": "Design et développement Frontend d'un site dédié à l'or d'investissement, proposant diférent outils d'aide à la compréhention des cours de l'or.",
+        "desc": "Design et développement Frontend d'un site dédié à l'or d'investissement, proposant différent outils d'aide à la compréhension des cours de l'or.",
         "descfull": "",
         "mainPicture": "src/assets/images/mokeup/quelor.png",
         "pictures": [
@@ -157,7 +157,7 @@
     },
     {
         "title": "Kasa 🏠🧑‍🎓",
-        "desc": "Adaptaion d'une maquette en site web responsive React",
+        "desc": "Adaptation d'une maquette en site web responsive React",
         "descfull": "Le projet Kasa est une application React développé dans le cadre de ma formation chez Openclassroom. Il s'agit d'une adaptation d'une maquette Figma en site web responsive. J'ai utilisé React et SCSS pour créer une application web qui fonctionne sur tous les appareils.",
         "mainPicture": "src/assets/images/mokeup/kasa.png",
         "pictures": [

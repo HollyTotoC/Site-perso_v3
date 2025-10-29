@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code directories
+.claude/
+.context/
+# Context documentation (comment out to track these files)
+# Uncomment lines below if you want to commit .context/ to share with team
+# .context/status/
+# .context/tasks/*.tmp

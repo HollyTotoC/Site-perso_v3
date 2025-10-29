@@ -1,6 +1,8 @@
 import Lottie from "react-lottie";
 import animationData from "../assets/lotties/mail.json";
 import { motion } from "framer-motion";
+import totoPhoto from "../assets/images/toto.webp";
+import cv from "../assets/CV_Certa_Theo_Frontend_2024.pdf";
 
 //import logos
 import html5 from "../assets/images/logos/html5.svg";
@@ -69,8 +71,8 @@ const About = () => {
                     <div className="row-span-1 col-span-1  rounded-xl overflow-hidden  shadow-white-xl">
                         <img
                             className="object-cover w-full h-full"
-                            src="src/assets/images/toto.webp"
-                            alt=""
+                            src={totoPhoto}
+                            alt="Photo de Théo Certa, développeur créatif et front-end"
                         />
                     </div>
 
@@ -80,25 +82,31 @@ const About = () => {
 
                     <div className="row-span-1 col-span-1 grid grid-cols-2 grid-row-2 gap-4 ">
                         <a
-                            href=""
+                            href="https://www.linkedin.com/in/theo-certa/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
-                            aria-label="linkedin"
+                            aria-label="Profil LinkedIn de Théo Certa"
                             onClick={playSound}
                         >
                             <FaLinkedin className="text-4xl m-auto h-full" />
                         </a>
                         <a
-                            href=""
+                            href="https://github.com/HollyTotoC"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
-                            aria-label="github"
+                            aria-label="Profil GitHub de Théo Certa"
                             onClick={playSound}
                         >
                             <FaGithub className="text-4xl m-auto h-full" />
                         </a>
                         <a
-                            href=""
+                            href={cv}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent shadow-white-xl"
-                            aria-label="cv"
+                            aria-label="Télécharger le CV de Théo Certa"
                             onClick={playSound}
                         >
                             <TbFileCv className="text-4xl m-auto h-full" />
@@ -135,14 +143,6 @@ const About = () => {
 
                     <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5  shadow-white-xl overflow-hidden">
                         <Testimonials />
-                    </div>
-
-                    <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5  shadow-white-xl">
-                        test
-                    </div>
-
-                    <div className="row-span-1 col-span-1 flex flex-col bg-orange-100 rounded-xl p-5  shadow-white-xl">
-                        test
                     </div>
 
                     <div className="row-span-1 col-span-2 flex flex-col bg-white rounded-xl p-5  shadow-white-xl">

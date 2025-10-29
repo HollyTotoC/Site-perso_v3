@@ -11,7 +11,7 @@ const Landing = () => {
         return (
             <div className="flex justify-center items-center text-black bg-white rounded-full px-4 py-1">
                 <span>
-                    Disponible pour <span className="font-bold">Fev 2024</span>
+                    Disponible pour <span className="font-bold">Octobre 2025</span>
                 </span>
                 <span className="bg-green-500 animate-pulse rounded-full h-3 w-3 ml-2"></span>
             </div>
