@@ -18,10 +18,6 @@ const stackData: SkillCategory[] = [
         skills: ["TailwindCSS", "Next.js", "Vue.js", "Bootstrap", "Sass"]
     },
     {
-        category: "Creative & 3D",
-        skills: ["Three.js"]
-    },
-    {
         category: "IA & Automation",
         skills: ["Claude Code", "GitHub Copilot", "ChatGPT", "N8N"]
     },
@@ -40,12 +36,12 @@ const StackSlider = () => {
     const categoriesPerPage = 2;
     const totalPages = Math.ceil(stackData.length / categoriesPerPage);
 
-    // Auto-scroll toutes les 5 secondes
+    // Auto-scroll toutes les 8 secondes
     useEffect(() => {
         if (!isPaused) {
             const interval = setInterval(() => {
                 setCurrentPage((prev) => (prev + 1) % totalPages);
-            }, 5000);
+            }, 8000);
 
             return () => clearInterval(interval);
         }

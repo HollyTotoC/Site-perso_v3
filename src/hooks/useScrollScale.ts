@@ -8,12 +8,23 @@ type ScrollOptions = {
 
 const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
     const scrollRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(false);
+    // Détection mobile immédiate pour éviter le flash desktop sur mobile
+    const [isMobile, setIsMobile] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const isMobileWidth = window.innerWidth < 768;
+            const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+            return isMobileWidth || isIOS;
+        }
+        return false;
+    });
 
-    // Détecter si mobile
+    // Détecter si mobile (incluant détection iOS/iPhone)
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
+            const isMobileWidth = window.innerWidth < 768;
+            const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+            const isMobileDevice = isMobileWidth || isIOS;
+            setIsMobile(isMobileDevice);
         };
 
         checkMobile();
@@ -42,37 +53,36 @@ const useScrollScale = ({ minMarge, maxMarge }: ScrollOptions) => {
     const [marge, setMarge] = useState(minMarge);
 
     useEffect(() => {
-        // Si mobile, ne pas appliquer les effets de scroll
-        if (isMobile) {
-            setStyle({
-                position: "relative",
-                filter: "none",
-                opacity: 1,
-                zIndex: 1,
-                transformOrigin: "center",
-                transform: "scale(1)",
-                top: "0",
-                maxWidth: "1280px",
-            });
-            setMarge(minMarge);
-            return;
-        }
-
-        // Si desktop, comportement normal
         const unsubscribeScale = scale.on("change", (latestScale) => {
-            // Calculer la valeur de flou et arrondir
-            const blurValue = Math.round(30 * (1 - latestScale));
+            if (isMobile) {
+                // Mobile : effets légers, pas de sticky/blur
+                setStyle({
+                    position: "relative",
+                    filter: "none",
+                    opacity: latestScale,
+                    zIndex: 1,
+                    transformOrigin: "center",
+                    transform: `scale(${0.9 + (latestScale * 0.1)})`, // Scale subtil 0.9→1
+                    top: "0",
+                    maxWidth: "1280px",
+                });
+                setMarge(minMarge);
+            } else {
+                // Desktop : comportement normal avec blur
+                const blurValue = Math.round(30 * (1 - latestScale));
 
-            setStyle((currentStyle) => ({
-                ...currentStyle,
-                position: latestScale === 1 ? "sticky" : "fixed",
-                // Appliquer le flou uniquement si la valeur calculée est > 0
-                filter: blurValue > 0 ? `blur(${blurValue}px)` : "none",
-                opacity: latestScale,
-                zIndex: latestScale === 1 ? 1 : 0,
-                transform: `scale(${latestScale})`,
-            }));
-            setMarge(latestScale === 1 ? minMarge : maxMarge);
+                setStyle({
+                    position: latestScale === 1 ? "sticky" : "fixed",
+                    filter: blurValue > 0 ? `blur(${blurValue}px)` : "none",
+                    opacity: latestScale,
+                    zIndex: latestScale === 1 ? 1 : 0,
+                    transformOrigin: "center",
+                    transform: `scale(${latestScale})`,
+                    top: "0",
+                    maxWidth: "1280px",
+                });
+                setMarge(latestScale === 1 ? minMarge : maxMarge);
+            }
         });
 
         return () => {

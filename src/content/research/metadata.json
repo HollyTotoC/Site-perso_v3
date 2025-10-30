@@ -1,0 +1,37 @@
+{
+  "articles": [
+    {
+      "id": "001",
+      "file": "001-agentic-coding.md",
+      "title": "Agentic Coding: Révolutionner le développement avec l'IA",
+      "summary": "Comment l'orchestration d'agents IA spécialisés transforme radicalement notre approche du développement logiciel",
+      "date": "2025-10-30",
+      "tags": ["IA", "Développement", "Workflow", "Innovation"],
+      "readTime": "8 min",
+      "author": "Théo Certa",
+      "featured": true
+    },
+    {
+      "id": "002",
+      "file": "002-web3d-performance.md",
+      "title": "Optimisation 3D Web: Performance et Esthétique",
+      "summary": "Techniques avancées pour intégrer Three.js dans React sans sacrifier les performances",
+      "date": "2025-10-28",
+      "tags": ["Three.js", "React", "Performance", "WebGL"],
+      "readTime": "6 min",
+      "author": "Théo Certa",
+      "featured": false
+    },
+    {
+      "id": "003",
+      "file": "003-modern-ux.md",
+      "title": "UX Moderne: Au-delà des Conventions",
+      "summary": "Exploration des nouvelles frontières du design d'interface et de l'expérience utilisateur immersive",
+      "date": "2025-10-25",
+      "tags": ["UX", "Design", "Innovation", "Interfaces"],
+      "readTime": "5 min",
+      "author": "Théo Certa",
+      "featured": false
+    }
+  ]
+}

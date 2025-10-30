@@ -9,7 +9,7 @@ import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TbFileCv } from "react-icons/tb";
 import useScrollScale from "../hooks/useScrollScale";
-import Testimonials from "./Testimonials";
+import ResearchArticles from "./ResearchArticles";
 import useSoundPlayer from "../hooks/usePlaySound";
 import JobBox from "./JobBox";
 import StackSlider from "./StackSlider";
@@ -49,7 +49,7 @@ const About = () => {
     return (
         <motion.div className="relative" ref={scrollRef}>
             <motion.div
-                className="p-4 h-[100dvh] flex flex-col justify-end"
+                className={`p-4 flex flex-col justify-end ${!isDesktop ? 'min-h-screen pb-8' : 'h-[100dvh]'}`}
                 style={style}
                 id="about"
             >
@@ -162,7 +162,7 @@ const About = () => {
                     </a>
 
                     <div className="row-span-2 col-span-1 flex flex-col justify-between bg-gray-50 rounded-xl p-5  shadow-white-xl overflow-hidden">
-                        <Testimonials />
+                        <ResearchArticles />
                     </div>
 
                     {/* Bloc GitHub Contribution Graph */}
