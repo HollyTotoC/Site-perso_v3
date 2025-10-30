@@ -8,6 +8,7 @@ interface PortfolioProjectProps {
         desc: string;
         tags: string[];
         color: string;
+        gradient?: string;
         mainPicture: string;
         link: string;
     };
@@ -23,7 +24,7 @@ const PortfolioProject: React.FC<PortfolioProjectProps> = ({
     const playSound = useSoundPlayer();
 
     return (
-        <div key={index} className={`group col-span-2 row-span-2 h-full ${project.color} rounded-xl overflow-hidden shadow-white-xl relative cursor-pointer text-white`}>
+        <div key={index} className={`group col-span-2 row-span-2 h-full ${project.gradient || project.color} rounded-xl overflow-hidden shadow-white-xl relative cursor-pointer text-white`}>
             
             <div className="flex justify-center items-center w-full h-full z-0 blur-0 group-hover:blur-md transition-all duration-500 ease-in-out">
                 <img

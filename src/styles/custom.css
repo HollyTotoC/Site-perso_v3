@@ -1,13 +1,13 @@
 .bg-quelor {
   position: relative;
-  background: black;
+  background: linear-gradient(165deg, #000000 0%, #1a1410 50%, #0a0806 100%);
 }
 .bg-quelor::before, .bg-quelor::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 .bg-quelor::before {
   top: 0;
@@ -15,7 +15,7 @@
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   overflow: hidden;
-  background: radial-gradient(ellipse at 83% 8.8%, rgba(225, 182, 104, 0.402) 0%, rgba(0, 0, 0, 0) 40%);
+  background: radial-gradient(ellipse at 85% 8%, rgba(225, 182, 104, 0.35) 0%, rgba(225, 182, 104, 0.08) 30%, transparent 50%);
 }
 .bg-quelor::after {
   bottom: 0;
@@ -23,7 +23,7 @@
   border-bottom-left-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
   overflow: hidden;
-  background: radial-gradient(ellipse at 17% 91.2%, rgba(225, 182, 104, 0.402) 0%, rgba(0, 0, 0, 0) 29%);
+  background: radial-gradient(ellipse at 15% 92%, rgba(225, 182, 104, 0.28) 0%, rgba(225, 182, 104, 0.06) 25%, transparent 45%);
 }
 
 @keyframes float {
@@ -36,7 +36,18 @@
 }
 .bg-bioseine {
   position: relative;
-  background-color: #fbf7f1;
+  background: linear-gradient(135deg, #fbf7f1 0%, #fff5eb 50%, #ffe9d6 100%);
+}
+.bg-bioseine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 90% 10%, rgba(255, 136, 91, 0.12) 0%, transparent 45%);
+  border-radius: 0.75rem;
+  pointer-events: none;
 }
 
 .bg-jdp {

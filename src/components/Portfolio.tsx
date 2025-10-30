@@ -30,6 +30,21 @@ const Portfolio = () => {
                 {/* to load colors  */}
                 <div className="hidden bg-mvs-accent bg-hifumi-accent bg-meteo-accent bg bg-kasa-accent bg-piiquante-accent bg-omf-accent bg-kanap-accent bg-panthere-accent"></div>
 
+                {/* to load gradient colors */}
+                <div className="hidden">
+                    <div className="bg-gradient-to-br from-orange-400 via-orange-500 to-red-500"></div>
+                    <div className="bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-400"></div>
+                    <div className="bg-gradient-to-br from-purple-300 via-purple-400 to-indigo-400"></div>
+                    <div className="bg-gradient-to-br from-orange-500 via-orange-600 to-red-600"></div>
+                    <div className="bg-gradient-to-br from-pink-300 via-pink-400 to-fuchsia-400"></div>
+                    <div className="bg-gradient-to-br from-yellow-300 via-yellow-400 to-amber-400"></div>
+                    <div className="bg-gradient-to-br from-rose-400 via-red-400 to-orange-500"></div>
+                    <div className="bg-gradient-to-br from-lime-300 via-lime-400 to-green-400"></div>
+                    <div className="bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600"></div>
+                    <div className="bg-gradient-to-br from-purple-400 via-purple-500 to-violet-600"></div>
+                    <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black"></div>
+                </div>
+
                 {portfolio.map((project, index) => (
                     <PortfolioProject index={index} project={project}></PortfolioProject>
                 ))}

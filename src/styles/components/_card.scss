@@ -68,16 +68,16 @@
     }
   
     &::before {
-      background-image: url("../assets/images/logoJDPLivre.png");
+      background-image: url("../../assets/images/logoJDPLivre.png");
       transform: rotate(15deg); // Ajustez l'angle de rotation selon vos besoins
       left: 0;
       top: -5%;
       height: 50%;
       width: 50%;
     }
-  
+
     &::after {
-      background-image: url("../assets/images/logoJDPLivre.png");
+      background-image: url("../../assets/images/logoJDPLivre.png");
       transform: rotate(-30deg); // Ajustez l'angle de rotation selon vos besoins
       right: -25%;
       top: 42%;

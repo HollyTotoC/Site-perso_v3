@@ -3,16 +3,7 @@ import animationData from "../assets/lotties/mail.json";
 import { motion } from "framer-motion";
 import totoPhoto from "../assets/images/toto.webp";
 import cv from "../assets/CV_Certa_Theo_Frontend_2024.pdf";
-
-//import logos
-import html5 from "../assets/images/logos/html5.svg";
-import css3 from "../assets/images/logos/css3.svg";
-import javascript from "../assets/images/logos/javascript.svg";
-import react from "../assets/images/logos/react.svg";
-import typescript from "../assets/images/logos/typescript.svg";
-import sass from "../assets/images/logos/sass.svg";
-import bootstrap from "../assets/images/logos/bootstrap.svg";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //picto
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -21,9 +12,12 @@ import useScrollScale from "../hooks/useScrollScale";
 import Testimonials from "./Testimonials";
 import useSoundPlayer from "../hooks/usePlaySound";
 import JobBox from "./JobBox";
+import StackSlider from "./StackSlider";
 
 const About = () => {
     const [speed, setSpeed] = React.useState(0.5);
+    const [isDesktop, setIsDesktop] = useState(false);
+
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -40,6 +34,18 @@ const About = () => {
 
     const playSound = useSoundPlayer();
 
+    // Détection responsive pour la bio
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsDesktop(window.innerWidth >= 768);
+        };
+
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
     return (
         <motion.div className="relative" ref={scrollRef}>
             <motion.div
@@ -49,26 +55,40 @@ const About = () => {
             >
                 <div className="h-full grid grid-cols-1 md:grid-cols-4 auto-rows-auto md:auto-rows-fr gap-y-4 md:gap-4 rounded-xl">
                     {/* box1 */}
-                    <div className="row-span-2 col-span-2 flex flex-col justify-end bg-emerald-400 rounded-xl p-5  shadow-white-xl">
-                        <h2 className="font-title uppercase text-xl mt-32 mb-3 w-full md:w-8/12">
-                            Je suis Théo-toto Certa, un développeur front-end
-                            basé en France.
+                    <div className="row-span-2 col-span-2 flex flex-col justify-end bg-gray-50 rounded-xl p-5  shadow-white-xl">
+                        <h2 className="font-title uppercase text-xl mt-32 mb-3 w-full md:w-8/12 text-gray-900">
+                            Je suis Théo Certa, un développeur front-end
+                            basé à Paris, France.
                         </h2>
-                        <p>
-                            Développeur web passionné et créatif. Anciennement
-                            diplômé en cinéma avec une pratique de 10 ans comme
-                            réalisateur et motion designer. Fort d'une
-                            expérience de conseil en communication digitale,
-                            j'ai décidé de me diriger vers le développement web
-                            en suivant une formation chez OpenClassrooms.
-                            Compétent en HTML, CSS, JavaScript, React,
-                            Bootstrap, Git, Adobe Creative Suite et Figma, je
-                            suis en mesure de créer des expériences web
-                            innovantes et engageantes.
-                        </p>
+                        {!isDesktop ? (
+                            // Version Mobile/Tablette (< 768px)
+                            <p className="text-gray-700">
+                                Développeur front-end créatif avec 10 ans d'expérience en réalisation
+                                et motion design. Je crée des expériences web immersives en combinant
+                                sens artistique et expertise technique. 6 clients, 7 projets pro aboutis,
+                                et une approche moderne intégrant les outils IA pour multiplier l'impact.
+                            </p>
+                        ) : (
+                            // Version Desktop (>= 768px)
+                            <>
+                                <p className="mb-4 text-gray-700">
+                                    Développeur front-end créatif spécialisé dans les expériences web immersives.
+                                    Fort de 10 ans en réalisation et motion design, j'apporte une sensibilité
+                                    artistique unique à mes projets web. Mon expertise couvre React, TypeScript,
+                                    animations 3D (Three.js), et une maîtrise moderne des workflows augmentés
+                                    par l'IA.
+                                </p>
+                                <p className="text-gray-700">
+                                    J'ai accompagné 6 clients sur 7 projets professionnels aboutis, de la
+                                    conception UI/UX à l'intégration technique. Mon approche : allier créativité
+                                    débordante et rigueur technique pour créer des interfaces qui captivent et
+                                    performent.
+                                </p>
+                            </>
+                        )}
                     </div>
 
-                    <div className="row-span-1 col-span-1  rounded-xl overflow-hidden  shadow-white-xl">
+                    <div className="row-span-1 col-span-1 bg-white rounded-xl overflow-hidden  shadow-white-xl">
                         <img
                             className="object-cover w-full h-full"
                             src={totoPhoto}
@@ -85,7 +105,7 @@ const About = () => {
                             href="https://www.linkedin.com/in/theo-certa/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
+                            className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-gradient-to-br from-violet-300/90 via-purple-300/80 to-indigo-300/85 shadow-white-xl"
                             aria-label="Profil LinkedIn de Théo Certa"
                             onClick={playSound}
                         >
@@ -95,7 +115,7 @@ const About = () => {
                             href="https://github.com/HollyTotoC"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent  shadow-white-xl"
+                            className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-gradient-to-br from-violet-300/90 via-purple-300/80 to-indigo-300/85 shadow-white-xl"
                             aria-label="Profil GitHub de Théo Certa"
                             onClick={playSound}
                         >
@@ -105,17 +125,17 @@ const About = () => {
                             href={cv}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-select-accent shadow-white-xl"
+                            className="row-span-1 col-span-1 justify-center items-center rounded-xl bg-gradient-to-br from-violet-300/90 via-purple-300/80 to-indigo-300/85 shadow-white-xl"
                             aria-label="Télécharger le CV de Théo Certa"
                             onClick={playSound}
                         >
                             <TbFileCv className="text-4xl m-auto h-full" />
                         </a>
-                        <div className="row-span-1 col-span-1 rounded-xl bg-select-accent  shadow-white-xl"></div>
+                        <div className="row-span-1 col-span-1 rounded-xl bg-gradient-to-br from-violet-300/90 via-purple-300/80 to-indigo-300/85 shadow-white-xl"></div>
                     </div>
 
                     <a
-                        className="row-span-3 col-span-1 flex flex-col h-full justify-around bg-blue-600 text-white rounded-xl p-5 cursor-pointer shadow-white-xl"
+                        className="row-span-3 col-span-1 flex flex-col h-full justify-around bg-gradient-to-br from-blue-500/90 via-indigo-500/80 to-purple-500/85 text-white rounded-xl p-5 cursor-pointer shadow-white-xl"
                         onMouseEnter={() => setSpeed(1)}
                         onMouseLeave={() => setSpeed(0.5)}
                         href="mailto:totoc.contact@gmail.com"
@@ -141,72 +161,53 @@ const About = () => {
                         </div>
                     </a>
 
-                    <div className="row-span-2 col-span-1 flex flex-col justify-between bg-yellow-100 rounded-xl p-5  shadow-white-xl overflow-hidden">
+                    <div className="row-span-2 col-span-1 flex flex-col justify-between bg-gray-50 rounded-xl p-5  shadow-white-xl overflow-hidden">
                         <Testimonials />
                     </div>
 
-                    <div className="row-span-1 col-span-2 flex flex-col bg-white rounded-xl p-5  shadow-white-xl">
-                        <h2 className="font-title text-lg">
-                            Mes stacks&nbsp;:
-                        </h2>
-                        <ul className="flex items-center justify-around flex-wrap h-full">
-                            <li>
-                                <img
-                                    src={html5}
-                                    alt=""
-                                    title="HTML5"
-                                    className="grayscale contrast-150 hover:contrast-100 hover:grayscale-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                            <li>
-                                <img
-                                    src={css3}
-                                    alt=""
-                                    title="CSS3"
-                                    className="grayscale contrast-150 hover:contrast-100 hover:grayscale-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                            <li>
-                                <img
-                                    src={javascript}
-                                    alt=""
-                                    title="Javascript"
-                                    className="invert grayscale contrast-150 hover:contrast-100 hover:grayscale-0 hover:invert-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                            <li>
-                                <img
-                                    src={react}
-                                    alt=""
-                                    title="React"
-                                    className="invert grayscale contrast-150 hover:contrast-100 hover:grayscale-0 hover:invert-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                            <li>
-                                <img
-                                    src={typescript}
-                                    alt=""
-                                    title="TypeScript"
-                                    className="grayscale contrast-150 hover:contrast-100 hover:grayscale-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                            <li>
-                                <img
-                                    src={sass}
-                                    alt=""
-                                    title="Sass"
-                                    className="grayscale contrast-150 hover:contrast-100 hover:grayscale-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                            <li>
-                                <img
-                                    src={bootstrap}
-                                    alt=""
-                                    title="Bootstrap"
-                                    className="grayscale contrast-150 hover:contrast-100 hover:grayscale-0 transition-all ease-in-out duration-300"
-                                />
-                            </li>
-                        </ul>
+                    {/* Bloc GitHub Contribution Graph */}
+                    <a
+                        href="https://github.com/HollyTotoC"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="row-span-1 col-span-1 bg-gradient-to-br from-gray-100/95 via-white/90 to-slate-100/85 rounded-xl p-2 shadow-white-xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300 cursor-pointer group overflow-hidden"
+                        onClick={playSound}
+                    >
+                        {/* GitHub Chart */}
+                        <img
+                            src="https://ghchart.rshah.org/HollyTotoC"
+                            alt="GitHub Contribution Graph de Théo Certa"
+                            className="w-full h-full object-contain rounded-lg opacity-90 group-hover:opacity-100 transition-opacity"
+                            loading="lazy"
+                        />
+                    </a>
+
+                    {/* Bloc Stats - À la place du 2ème bloc test */}
+                    <div className="row-span-1 col-span-1 bg-gradient-to-br from-emerald-400/80 via-teal-400/70 to-cyan-400/75 rounded-xl p-4 shadow-white-xl flex flex-col items-center justify-center text-center text-white">
+                        {/* Chiffre principal */}
+                        <div className="flex-1 flex flex-col items-center justify-center">
+                            <div className="text-5xl font-bold font-title">6</div>
+                            <div className="text-lg font-semibold mt-1 uppercase tracking-wide">Clients</div>
+                        </div>
+
+                        {/* Séparateur */}
+                        <div className="w-12 h-0.5 bg-white/30 my-3"></div>
+
+                        {/* Chiffre secondaire */}
+                        <div className="flex-1 flex flex-col items-center justify-center">
+                            <div className="text-2xl font-bold font-title">14</div>
+                            <div className="text-xs font-semibold uppercase tracking-wide">Projets Livrés</div>
+                        </div>
+
+                        {/* Mention discrète */}
+                        <div className="text-xs mt-2 opacity-75">
+                            + 3-4 en cours
+                        </div>
+                    </div>
+
+                    {/* Stack Technologies - AVEC SLIDER */}
+                    <div className="row-span-1 col-span-2 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4 shadow-white-xl overflow-hidden">
+                        <StackSlider />
                     </div>
                 </div>
             </motion.div>

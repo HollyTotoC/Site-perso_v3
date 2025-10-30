@@ -19,7 +19,8 @@
             "Backend"
         ],
         "cat": "Web",
-        "color": "bg-bioseine-accent"
+        "color": "bg-bioseine-accent",
+        "gradient": "bg-gradient-to-br from-orange-400 via-orange-500 to-red-500"
     },
     {
         "title": "Quelor 🪙📈",
@@ -42,12 +43,13 @@
             "Backend"
         ],
         "cat": "Web",
-        "color": "bg-quelor-accent"
+        "color": "bg-quelor-accent",
+        "gradient": "bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-400"
     },
     {
         "title": "Select-informatique 🧑‍💻",
         "desc": "Développement Frontend d'un site vitrine pour un développeur de solution informatique pour laboratoire d'analyse médicale sur WordPress",
-        "descfull": "Select-informatique m'a contacté pour développer leur site vitrine afin de mettre en avant leur nouveau SIL : iLab. Avec l’assistance d'une graphiste pour la partie design, j'ai développé leur nouveau site via Wordpress avec Elementor pur leur créer un thème personnalisé leur laissant la possibilité de faire évoluer leur nouvelle vitrine.",
+        "descfull": "Select-informatique m'a contacté pour développer leur site vitrine afin de mettre en avant leur nouveau SIL : iLab. Avec l'assistance d'une graphiste pour la partie design, j'ai développé leur nouveau site via Wordpress avec Elementor pur leur créer un thème personnalisé leur laissant la possibilité de faire évoluer leur nouvelle vitrine.",
         "mainPicture": "src/assets/images/mokeup/select.png",
         "pictures": [
         ],
@@ -63,12 +65,13 @@
             "Backend"
         ],
         "cat": "Web",
-        "color": "bg-select-accent"
+        "color": "bg-select-accent",
+        "gradient": "bg-gradient-to-br from-purple-300 via-purple-400 to-indigo-400"
     },
     {
         "title": "Edition Jean de Portal 📕",
         "desc": "Redesign et refonte du site principal d'une maison d'édition avec boutique, gestion d'abonement, campagne publicitaires, webinaires et back office",
-        "descfull": "Le site des éditions Jean de Portal est un projet ambitieux qui regroupe de nombreuse fonctionnalités techniques : boutique, gestion de stock, gestion d’abonnement, microservices, micro-site rattaché,...",
+        "descfull": "Le site des éditions Jean de Portal est un projet ambitieux qui regroupe de nombreuse fonctionnalités techniques : boutique, gestion de stock, gestion d'abonnement, microservices, micro-site rattaché,...",
         "mainPicture": "src/assets/images/mokeup/jdp.png",
         "pictures": [
         ],
@@ -85,7 +88,7 @@
             "Backend"
         ],
         "cat": "Web",
-        "color": "bg-jdp-accent"
+        "color": "bg-jdp"
     },
     {
         "title": "MVS France 💻📝",
@@ -106,7 +109,8 @@
             "SEO"
         ],
         "cat": "Web",
-        "color": "bg-mvs-accent"
+        "color": "bg-mvs-accent",
+        "gradient": "bg-gradient-to-br from-orange-500 via-orange-600 to-red-600"
     },
     {
         "title": "HiFuMi 🎮📝",
@@ -130,7 +134,8 @@
             "Backend"
         ],
         "cat": "Web",
-        "color": "bg-hifumi-accent"
+        "color": "bg-hifumi-accent",
+        "gradient": "bg-gradient-to-br from-pink-300 via-pink-400 to-fuchsia-400"
     },
     {
         "title": "Weather App ⛅📝",
@@ -153,7 +158,8 @@
             "Backend"
         ],
         "cat": "Web",
-        "color": "bg-meteo-accent"
+        "color": "bg-meteo-accent",
+        "gradient": "bg-gradient-to-br from-yellow-300 via-yellow-400 to-amber-400"
     },
     {
         "title": "Kasa 🏠🧑‍🎓",
@@ -168,7 +174,8 @@
         "tags": ["React", "SCSS", "Frontend"],
         "cat": "Web",
         "scrollY": "-47%",
-        "color": "bg-kasa-accent"
+        "color": "bg-kasa-accent",
+        "gradient": "bg-gradient-to-br from-rose-400 via-red-400 to-orange-500"
     },
     {
         "title": "Piiquante 🌶️🧑‍🎓",
@@ -182,7 +189,8 @@
         "client": "Openclassroom",
         "tags": ["Node.js", "Express", "MongoDB", "back"],
         "cat": "Web",
-        "color": "bg-piiquante-accent"
+        "color": "bg-piiquante-accent",
+        "gradient": "bg-gradient-to-br from-lime-300 via-lime-400 to-green-400"
     },
     {
         "title": "Kanap 🛋️🧑‍🎓",
@@ -196,7 +204,8 @@
         "client": "Openclassroom",
         "tags": ["Node", "JS", "SCSS", "Frontend", "CRUD"],
         "cat": "Web",
-        "color": "bg-kanap-accent"
+        "color": "bg-kanap-accent",
+        "gradient": "bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600"
     },
     {
         "title": "OhMyFood 🍽️🧑‍🎓",
@@ -210,7 +219,8 @@
         "client": "Openclassroom",
         "tags": ["HTML", "SCSS", "front"],
         "cat": "Web",
-        "color": "bg-omf-accent"
+        "color": "bg-omf-accent",
+        "gradient": "bg-gradient-to-br from-purple-400 via-purple-500 to-violet-600"
     },
     {
         "title": "La Panthère 🐈‍⬛🧑‍🎓",
@@ -224,6 +234,7 @@
         "client": "Openclassroom",
         "tags": ["HTML", "SCSS", "front", "SEO"],
         "cat": "Web",
-        "color": "bg-panthere-accent"
+        "color": "bg-panthere-accent",
+        "gradient": "bg-gradient-to-br from-gray-800 via-gray-900 to-black"
     }
 ]

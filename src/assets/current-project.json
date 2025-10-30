@@ -1,0 +1,14 @@
+{
+  "status": "available",
+  "availability": {
+    "freelance": true,
+    "cdi": true,
+    "remote": "flexible"
+  },
+  "focus": "Frontend créatif & outils IA",
+  "contact": {
+    "email": "totoc.pro@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/theo-certa/",
+    "github": "https://github.com/HollyTotoC"
+  }
+}
